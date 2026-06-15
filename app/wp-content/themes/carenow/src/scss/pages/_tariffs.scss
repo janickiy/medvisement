@@ -1,0 +1,159 @@
+.tariff-card {
+  border-radius: 20px;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #eaeaea;
+  width: calc((100% - 72px) / 4);
+  display: flex;
+  flex-direction: column;
+
+  @include max($bp-md) {
+    width: calc((100% - 24px) / 2);
+  }
+
+  @include max($bp-sm) {
+    width: 100%;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    border-radius: 8px;
+    padding: 2px 4px;
+    background: $light-grey;
+    color: #fff;
+    line-height: 120%;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark-blue;
+    margin-bottom: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 2lh;
+  }
+
+  &__duration {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: $dark-grey;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark-blue;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+
+    h4 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: $dark-grey;
+      margin-bottom: 12px;
+      padding: 0;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 120%;
+      color: $dark-grey;
+    }
+  }
+
+  &__options {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h4 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: $dark-grey;
+      padding: 0;
+    }
+  }
+
+  &__option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+
+    input[type='radio'] {
+      margin-right: 0 !important;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 117%;
+      color: $dark-grey;
+      width: calc(100% - 28px);
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+
+    .button {
+      width: 100%;
+      display: block;
+      border-radius: 12px !important;
+      padding: 12px 0px !important;
+      font-weight: 600 !important;
+      font-size: 14px !important;
+      line-height: 100% !important;
+      color: #fff !important;
+      background: $dark-blue !important;
+      text-align: center;
+
+      &:hover {
+        background: #34b9cc !important;
+      }
+    }
+
+    .added_to_cart {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      text-decoration: underline !important;
+      text-align: left;
+      color: $dark-blue;
+      padding: 0;
+      margin-top: 12px;
+      border: 0 !important;
+      text-align: center;
+    }
+  }
+
+  &__details-btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration: underline !important;
+    text-align: left;
+    color: $dark-blue;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+}

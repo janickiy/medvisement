@@ -1,0 +1,103 @@
+.price-rule-active td {
+    background-color: #cc99c2 !important;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.discounts-for-subscriptions-table {
+    margin-top: 15px;
+}
+
+.price-rule-active td {
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.price-rule-active .amount {
+    color: #fff;
+}
+
+.discounts-for-subscriptions-table {
+    margin: 15px 0;
+}
+
+.discounts-for-subscriptions-table tr{
+    background: #fff;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.price-table-tooltip {
+    padding: 0;
+    width: 250px !important;
+    z-index: 99999;
+}
+
+.discounts-for-subscriptions-table-icon {
+    vertical-align: middle;
+}
+
+.price-table-tooltip-svg {
+    margin-left: 8px;
+    width: 15px;
+    cursor: help;
+}
+
+.price-table-tooltip .discounts-for-subscriptions-table {
+    margin: 0;
+}
+
+.price-table-tooltip {
+    position: relative;
+}
+
+/**
+* Summary table
+*/
+.subscription-discounts-summary-table {
+    margin: 20px 0;
+}
+
+.subscription-discounts-summary-table--hidden {
+    display: none;
+}
+
+.subscription-discounts-summary-table__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-weight: bold;
+    border-top: 1px solid #f5f5f5;
+}
+
+.subscription-discounts-summary-table__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.subscription-discounts-summary-table__total {
+    font-size: 1.5em;
+    margin-left: 5px;
+}
+
+.subscription-discounts-summary-table--inline {
+    font-size: 1.3em;
+}
+
+.subscription-discounts-summary-table-inline__label {
+    display: inline-block;
+}
+/**
+/**
+* End summary table
+*/

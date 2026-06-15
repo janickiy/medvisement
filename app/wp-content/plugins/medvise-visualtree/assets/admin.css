@@ -1,0 +1,54 @@
+#vt-admin {
+    width: auto;
+    min-width: 80%;
+}
+
+#vt-admin th:nth-child(3),
+#vt-admin th:nth-child(4),
+#vt-admin td:nth-child(3),
+#vt-admin td:nth-child(4) {
+    padding: 0 10px;
+}
+#vt-admin span.fancytree-node {
+    min-height: 24px !important;
+    display: flex !important;
+    align-items: center;
+}
+#vt-admin tbody tr.fancytree-active {
+    background-color: #dce5ff;
+}
+#vt-admin td.alignCenter {
+    text-align: center;
+}
+#vt-admin td.alignRight {
+    text-align: right;
+}
+
+#vt-admin .fancytree-title {
+    padding-left: 12px;
+    width: 100%;
+}
+#vt-admin .fancytree-title,
+#vt-admin .fancytree-edit-input {
+    font-size: 14px !important;
+    color: #000 !important;
+    min-height: auto !important;
+    line-height: 1 !important;
+}
+#vt-admin .fancytree-edit-input {
+    padding: 0 6px !important;
+    margin-left: -6px;
+}
+
+#vt-admin span.pending span.fancytree-title:after {
+    content: " (не сохранено)";
+    font-style: italic;
+}
+
+#vt-admin_setup-post .select2 {
+    width: 100% !important;
+}
+
+.select2-container {
+    z-index: 100051 !important;
+}

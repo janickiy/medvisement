@@ -1,0 +1,14 @@
+$dark-blue: #152644;
+$dark-grey: #666666;
+$light-grey: #C4C4C4;
+
+$bp-xs: 360px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-xl: 1200px;
+
+@mixin max($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

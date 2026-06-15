@@ -1,0 +1,328 @@
+/* --- Глобальные переменные и стили --- */
+#quiz-container {
+    padding-bottom: 20px;
+}
+
+.my-quiz-builder-single-quiz-wrapper {
+    --primary-color: #0073aa;
+    --light-gray: #f0f0f1;
+    --medium-gray: #e0e0e0;
+    --text-color: #3c434a;
+    --white: #fff;
+    --border-radius: 8px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+}
+
+/* --- Заголовок и описание --- */
+.my-quiz-builder-single-quiz-wrapper .entry-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #1d2327;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+/* --- Вопросы --- */
+.quiz-question-item {
+    background-color: #f9f9f9;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 25px;
+    page-break-inside: avoid;
+}
+
+.quiz-question-item.question-unanswered {
+    border-color: #dc3545;
+    background-color: #fff3f3;
+}
+
+.question-text {
+    font-size: 18px;
+    margin-top: 0;
+    word-wrap: break-word;
+}
+
+p.question-text:last-of-type {
+    margin-bottom: 12px !important;
+}
+
+.quiz-required-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    /* ИЗМЕНЕНО: Установлен новый отступ сверху */
+    margin-bottom: 15px;
+}
+
+/* --- Ответы (радиокнопки) --- */
+.quiz-answers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-answer {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--white);
+    padding: 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.quiz-answer:hover {
+    border-color: var(--primary-color);
+    background-color: #f5fbff;
+}
+
+.quiz-answer input[type="radio"] {
+    display: none;
+}
+
+.quiz-answer span {
+    position: relative;
+    padding-left: 30px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+    min-width: 0;
+}
+
+.quiz-answer span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    transform: translateY(0);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 50%;
+    background: var(--white);
+}
+
+.quiz-answer span::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0.2em;
+    transform: translateY(5px) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.quiz-answer input[type="radio"]:checked + span {
+    font-weight: 600;
+}
+
+.quiz-answer input[type="radio"]:checked + span::before {
+    border-color: var(--primary-color);
+}
+
+.quiz-answer input[type="radio"]:checked + span::after {
+    transform: translateY(5px) scale(1);
+}
+
+/* --- Кнопка и результаты --- */
+
+
+#get-quiz-result {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #33b9cb;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#get-quiz-result:hover {
+    background-color: #005a87;
+}
+
+#get-quiz-result.button-inactive {
+    background-color: #a0a5aa;
+}
+
+.my-quiz-builder-quiz-results {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid var(--light-gray);
+}
+
+.quiz-single-result {
+    background: var(--light-gray);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary-color);
+    page-break-inside: avoid;
+}
+
+.quiz-single-result p {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+}
+
+.quiz-single-result .result-score {
+    font-weight: bold;
+}
+
+.quiz-single-result .result-description {
+    word-wrap: break-word;
+}
+
+.quiz-single-result .result-description p,
+.quiz-single-result .result-description b,
+.quiz-single-result .result-description i,
+.quiz-single-result .result-description u {
+    font-size: inherit;
+}
+
+/* --- Стили для кнопок печати --- */
+.quiz-print-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.quiz-print-actions .button {
+    background-color: #f0f0f1;
+    border: 1px solid #ccc;
+    color: #3c434a;
+    font-weight: normal;
+}
+
+.quiz-print-actions .button:hover {
+    background-color: #e0e0e0;
+}
+
+#print-full-quiz.button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+#print-full-quiz.button:hover {
+    color: #005a87;
+    background: transparent;
+}
+
+
+.answer-text-input {
+    height: auto;
+}
+
+
+/* ==============================================
+СТИЛИ ДЛЯ ПЕЧАТИ 
+==============================================
+*/
+@media print {
+    body, html {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #fff !important;
+    }
+
+    @page {
+        margin: 2cm;
+    }
+
+    /* НОВОЕ: Скрываем шапку сайта при печати */
+    .header {
+        display: none !important;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .my-quiz-builder-single-quiz-wrapper, .my-quiz-builder-single-quiz-wrapper * {
+        visibility: visible;
+    }
+
+    .my-quiz-builder-single-quiz-wrapper {
+        position: static;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    #get-quiz-result, .quiz-print-actions, .quiz-required-message {
+        display: none !important;
+    }
+
+    .print-results-only #my-quiz-form {
+        display: none;
+    }
+
+    .print-results-only #quiz-results-display {
+        display: block !important;
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .print-full-quiz #quiz-results-display {
+        display: block !important;
+        margin-top: 30px;
+        page-break-before: auto;
+    }
+
+    .print-full-quiz .quiz-answer {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .print-full-quiz .quiz-answer input[type="radio"]:checked + span {
+        font-weight: bold;
+        background-color: #e5e5e5;
+        display: block;
+        margin: -10px;
+        padding: 10px;
+    }
+
+    .print-full-quiz .quiz-answer span::before,
+    .print-full-quiz .quiz-answer span::after {
+        display: none;
+    }
+
+    .print-full-quiz .quiz-answer span {
+        padding-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    body, #page, #primary, #main, .content-area, .site-main, .site-content {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
+    }
+
+    /* Это правило гарантирует, что шапка и подвал не занимают место */
+    header, footer, .site-header, .site-footer {
+        display: none !important;
+    }
+}

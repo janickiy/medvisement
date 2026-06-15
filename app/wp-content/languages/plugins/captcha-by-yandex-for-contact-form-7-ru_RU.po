@@ -1,0 +1,147 @@
+# Translation of Plugins - Captcha by Yandex for Contact Form 7 - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Captcha by Yandex for Contact Form 7 - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-04 17:07:26+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Captcha by Yandex for Contact Form 7 - Stable (latest release)\n"
+
+#. Description of the plugin
+#: bootstrap.php
+msgid "Allow use Yandex captcha for your forms with Contact Form 7"
+msgstr "Позволяет использовать Яндекс капчу для ваших форм в плагине Contact Form 7"
+
+#. Plugin Name of the plugin
+#: bootstrap.php
+msgid "Captcha by Yandex for Contact Form 7"
+msgstr "Капча от Яндекс для Contact Form 7"
+
+#: controller/class-cfyc-service.php:219
+msgid "Client key"
+msgstr "Ключ клиента"
+
+#: controller/class-cfyc-common.php:138 controller/class-cfyc-common.php:139
+msgid "Configure"
+msgstr "Настроить"
+
+#: controller/class-cfyc-form-tag.php:103
+msgid "Data processing block"
+msgstr "Блок Обработка Данных"
+
+#: controller/class-cfyc-form-tag.php:78
+msgid "Enable test mode"
+msgstr "Включить режим тестирования"
+
+#: controller/class-cfyc-service.php:175
+msgid "Error"
+msgstr "Ошибка"
+
+#: views/requirements-error.php:7
+msgid "error: Your environment does not meet all of the system requirements listed below."
+msgstr "ошибка: Ваше окружение не удовлетворяет всем системным требованиям указанным ниже."
+
+#: controller/class-cfyc-form-tag.php:109
+msgid "Hide data processing block"
+msgstr "Скрыть блок Обработка Данных"
+
+#: views/requirements-error.php:17
+msgid "If you need to upgrade your version of PHP you can ask your hosting company for assistance, and if you need help upgrading WordPress you can refer to the"
+msgstr "Если вам нужно обновить вашу версию PHP, вы можете запросить это у вашего хостинг-провайдер, и если вам нужно обновить WordPress посмотрите в"
+
+#: controller/class-cfyc-form-tag.php:138
+#: controller/class-cfyc-form-tag.php:166
+msgid "Insert Tag"
+msgstr "Добавить"
+
+#: controller/class-cfyc-service.php:176
+msgid "Invalid keys"
+msgstr "Некорректные ключи"
+
+#: controller/class-cfyc-form-tag.php:85 controller/class-cfyc-form-tag.php:90
+msgid "Invisible captcha"
+msgstr "Невидимая капча"
+
+#: controller/class-cfyc-form-tag.php:112
+msgid "It is your responsibility to notify users that their data is being processed by SmartCaptcha. If you hide the notification block, let users know in some other way that SmartCaptcha is processing their data."
+msgstr "Вы обязаны уведомлять пользователей о том, что их данные обрабатывает SmartCaptcha. Если вы скрываете блок с уведомлением, сообщите пользователям иным способом о том, что SmartCaptcha обрабатывает их данные."
+
+#: controller/class-cfyc-form-tag.php:63
+msgid "Name"
+msgstr "Имя"
+
+#: controller/class-cfyc-frontend.php:171
+msgid "Please check captcha"
+msgstr "Необходимо решить капчу"
+
+#. translators: %s: url
+#: controller/class-cfyc-form-tag.php:31
+msgid "Please configure the plugin first. Go to <a href=\"%s\">configuration</a>"
+msgstr "Для использования капчи необходимо сперва Настроить плагин. Перейти к <a href=\"%s\">настройке</a>"
+
+#: bootstrap.php:55
+msgid "Please install and activate Contact Form 7 plugin first"
+msgstr "Сперва необходимо установить и активировать плагин Contact Form 7"
+
+#: controller/class-cfyc-form-tag.php:118
+msgid "Position of Data processing block:"
+msgstr "Положение блока Обработка Данных"
+
+#: controller/class-cfyc-service.php:260
+msgctxt "API keys"
+msgid "Remove Keys"
+msgstr "Удалить ключи"
+
+#: controller/class-cfyc-service.php:265
+msgid "Save Changes"
+msgstr "Сохранить настройки"
+
+#: controller/class-cfyc-service.php:236
+msgid "Server Key"
+msgstr "Ключ сервера"
+
+#: controller/class-cfyc-service.php:181
+msgid "Settings saved."
+msgstr "Настройки сохранены"
+
+#: controller/class-cfyc-service.php:204
+msgid "Setup Integration"
+msgstr "Настроить интеграцию"
+
+#: controller/class-cfyc-form-tag.php:69 controller/class-cfyc-form-tag.php:74
+msgid "Test mode"
+msgstr "Режим тестирования"
+
+#: controller/class-cfyc-form-tag.php:94
+msgid "Use invisible captcha"
+msgstr "Использовать невидимую капчу"
+
+#: controller/class-cfyc-service.php:31
+msgid "Yandex Captcha"
+msgstr "Яндекс капча"
+
+#: views/requirements-error.php:7
+msgid "Yandex Captcha for Contact Form 7"
+msgstr "Яндекс капча for Contact Form 7"
+
+#: controller/class-cfyc-service.php:194
+msgid "Yandex Captcha is active on this site."
+msgstr "Яндекс капча активирована на этом сайте."
+
+#: controller/class-cfyc-service.php:188
+msgid "Yandex Captcha protects you against spam and other types of automated abuse. With Contact Form 7&#8217;s Yandex Captcha integration module, you can block abusive form submissions by spam bots."
+msgstr "Яндекс капча защищает вас от спама и других способов автоматического злоупотребления. В интеграции с Contact Form 7, модуль Яндекс капча позволяет блокировать спам и злоупотребления."
+
+#. translators: %s: php version
+#: bootstrap.php:40
+msgid "Your server is running PHP version %1$s but this plugin requires at least PHP %2$s. Please run an upgrade."
+msgstr "Ваш сервер работает на PHP версии %1$s, но плагину требуется минимум PHP версии %2$s. Пожалуйста обновите PHP до минимально необходимой версии."
+
+#. translators: %s: WP version
+#: bootstrap.php:48
+msgid "Your Wordpress running version is %1$s but this plugin requires at least version %2$s. Please run an upgrade."
+msgstr "Версия вашего WordPress %1$s, но плагину требуется минимально версия %2$s. Пожалуйста обновите WordPress до минимально необходимой версии."

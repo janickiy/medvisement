@@ -1,0 +1,511 @@
+.fancytree-container_search__row {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.fancytree-container_search__row input[name="vt-search"] {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.fancytree-container_search__row #vtBtnResetSearch {
+    font-size: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    max-height: 59px;
+    padding: 14px 16px 20px 16px;
+    background-color: var(--theme-secondary-color);
+}
+
+#vtMatches {
+    vertical-align: middle;
+}
+
+.fancytree-container_search__row.is-loading:before {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 70px;
+    top: 15px;
+    border-width: 3px;
+    border-color: var(--theme-secondary-color);
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+    border-radius: 100%;
+    border-style: solid;
+    content: '';
+}
+
+@media screen and (max-width: 767.5px) {
+    .fancytree-container_search__row button.search-submit {
+        margin-top: 0;
+        width: auto;
+    }
+}
+
+/*------------------------------------------------------------------------------
+ * Helpers
+ *----------------------------------------------------------------------------*/
+.fancytree-helper-hidden {
+    display: none;
+}
+.fancytree-helper-indeterminate-cb {
+    color: #777;
+}
+.fancytree-helper-disabled {
+    color: silver;
+}
+/* Helper to allow spinning loader icon with glyph-, ligature-, and SVG-icons. */
+.fancytree-helper-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+/*------------------------------------------------------------------------------
+ * Container and UL / LI
+ *----------------------------------------------------------------------------*/
+ul.fancytree-container {
+    font-family: tahoma, arial, helvetica;
+    font-size: 10pt;
+    white-space: nowrap;
+    padding: 3px;
+    margin: 0;
+    background-color: white;
+    border: 1px dotted gray;
+    min-height: 0%;
+    position: relative;
+}
+ul.fancytree-container ul {
+    padding: 0 0 0 10pt;
+    margin: 0;
+}
+ul.fancytree-container ul > li:before {
+    content: none;
+}
+ul.fancytree-container li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-position: 0pt 0pt;
+    background-repeat: repeat-y;
+    background-image: none;
+    margin: 0;
+}
+ul.fancytree-container li.fancytree-lastsib {
+    background-image: none;
+}
+.ui-fancytree-disabled ul.fancytree-container {
+    opacity: 0.5;
+    background-color: silver;
+}
+ul.fancytree-container li.fancytree-lastsib,
+ul.fancytree-no-connector > li {
+    background-image: none;
+}
+li.fancytree-animating {
+    position: relative;
+}
+
+.fancytree-container thead {
+    display: none;
+}
+
+.fancytree-container tbody {
+    border: 1px solid #dbdbdb;
+    padding: 10px 0 10px 5px;
+    display: block;
+}
+
+.fancytree-container th,
+.fancytree-container td {
+    text-align: left;
+    border: none;
+    padding: 3px 0;
+    line-height: 1;
+}
+
+tr.fancytree-hide {
+    display: none;
+}
+
+.fancytree-container a {
+    border-bottom: 2px solid var(--theme-primary-color);
+}
+
+.fancytree-container a:active,
+.fancytree-container a:hover {
+    border-color: transparent;
+}
+
+.fancytree-container .mark,
+.fancytree-container mark {
+    padding: 0;
+}
+
+@media screen and (max-width: 767.5px) {
+    .fancytree-container tbody {
+        width: 270px;
+        display: block;
+        overflow-x: scroll;
+        margin: 0 auto;
+    }
+}
+
+/*------------------------------------------------------------------------------
+ * Common icon definitions
+ *----------------------------------------------------------------------------*/
+span.fancytree-empty,
+span.fancytree-vline,
+span.fancytree-expander,
+span.fancytree-icon,
+span.fancytree-checkbox,
+span.fancytree-drag-helper-img,
+#fancytree-drop-marker {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+span.fancytree-icon,
+span.fancytree-checkbox,
+span.fancytree-expander,
+span.fancytree-custom-icon {
+    margin-top: 0px;
+}
+/* Used by icon option: */
+span.fancytree-custom-icon {
+    width: 10pt;
+    height: 10pt;
+    display: inline-block;
+    margin-left: 3px;
+    background-position: 0pt 0pt;
+}
+/* Used by 'icon' node option: */
+img.fancytree-icon {
+    width: 10pt;
+    height: 10pt;
+    margin-left: 3px;
+    margin-top: 0px;
+    vertical-align: top;
+    border-style: none;
+}
+/*------------------------------------------------------------------------------
+ * Expander icon
+ *
+ * Note: IE6 doesn't correctly evaluate multiples class names,
+ *		 so we create combined class names that can be used in the CSS.
+ *
+ * Prefix: fancytree-exp-
+ * 1st character: 'e': expanded, 'c': collapsed, 'n': no children
+ * 2nd character (optional): 'd': lazy (Delayed)
+ * 3rd character (optional): 'l': Last sibling
+ *----------------------------------------------------------------------------*/
+span.fancytree-expander {
+    cursor: pointer;
+}
+/* Fade out expanders, when container is not hovered or active */
+.fancytree-fade-expander span.fancytree-expander {
+    transition: opacity 1.5s;
+    opacity: 0;
+}
+.fancytree-fade-expander:hover span.fancytree-expander,
+.fancytree-fade-expander.fancytree-treefocus span.fancytree-expander,
+.fancytree-fade-expander .fancytree-treefocus span.fancytree-expander,
+.fancytree-fade-expander [class*="fancytree-statusnode-"] span.fancytree-expander {
+    transition: opacity 0.6s;
+    opacity: 1;
+}
+/*------------------------------------------------------------------------------
+ * Checkbox icon
+ *----------------------------------------------------------------------------*/
+span.fancytree-checkbox {
+    margin-left: 3px;
+}
+.fancytree-unselectable span.fancytree-checkbox {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+.fancytree-container.fancytree-checkbox-auto-hide span.fancytree-checkbox {
+    visibility: hidden;
+}
+.fancytree-container.fancytree-checkbox-auto-hide .fancytree-node:hover span.fancytree-checkbox,
+.fancytree-container.fancytree-checkbox-auto-hide tr:hover td span.fancytree-checkbox,
+.fancytree-container.fancytree-checkbox-auto-hide .fancytree-node.fancytree-selected span.fancytree-checkbox,
+.fancytree-container.fancytree-checkbox-auto-hide tr.fancytree-selected td span.fancytree-checkbox {
+    visibility: unset;
+}
+.fancytree-container.fancytree-checkbox-auto-hide.fancytree-treefocus .fancytree-node.fancytree-active span.fancytree-checkbox,
+.fancytree-container.fancytree-checkbox-auto-hide.fancytree-treefocus tr.fancytree-active td span.fancytree-checkbox {
+    visibility: unset;
+}
+/*------------------------------------------------------------------------------
+ * Node type icon
+ * Note: IE6 doesn't correctly evaluate multiples class names,
+ *		 so we create combined class names that can be used in the CSS.
+ *
+ * Prefix: fancytree-ico-
+ * 1st character: 'e': expanded, 'c': collapsed
+ * 2nd character (optional): 'f': folder
+ *----------------------------------------------------------------------------*/
+span.fancytree-icon {
+    margin-left: 5px;
+}
+/* Documents */
+/* Folders */
+.fancytree-loading span.fancytree-expander,
+.fancytree-loading span.fancytree-expander:hover,
+.fancytree-statusnode-loading span.fancytree-icon,
+.fancytree-statusnode-loading span.fancytree-icon:hover,
+span.fancytree-icon.fancytree-icon-loading {
+    background-image: none;
+}
+/* Status node icons */
+/*------------------------------------------------------------------------------
+ * Node titles and highlighting
+ *----------------------------------------------------------------------------*/
+span.fancytree-expander {
+    font-size: 20px;
+}
+span.fancytree-expander.fa-circle {
+    font-size: 12px;
+}
+
+.ft {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ft-folder-closed {
+    background-image: url("./icons/folder-closed.svg");
+    width: 22px;
+    min-width: 22px;
+    height: 20px;
+}
+
+.ft-folder-open {
+    background-image: url("./icons/folder-open.svg");
+    width: 22px;
+    min-width: 22px;
+    height: 20px;
+}
+
+.ft-document {
+    background-image: url("./icons/document.svg");
+    width: 22px;
+    min-width: 22px;
+    height: 20px;
+}
+
+span.fancytree-node {
+    /* See #117 */
+    display: inherit;
+    width: 100%;
+    margin-top: 1px;
+    min-height: 10pt;
+}
+span.fancytree-node.article-main {
+    left: -22px;
+}
+span.fancytree-node.article-main .ft-document {
+    position: relative;
+}
+span.fancytree-node.article-main .ft-document:before {
+    position: absolute;
+    top: -13px;
+    left: 10px;
+    height: 12px;
+    width: 1.5px;
+    content: "";
+    background: #33B9CB;
+}
+
+span.fancytree-node {
+    opacity: 0.7;
+}
+
+span.fancytree-node.link,
+.fancytree-has-children span.fancytree-node {
+    opacity: 1;
+}
+
+span.fancytree-title {
+    line-height: 1.2;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 10pt;
+    padding: 0 3px 0 0;
+    margin: 0px 0 0 10px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+}
+span.fancytree-node.fancytree-error span.fancytree-title {
+    color: red;
+}
+/*------------------------------------------------------------------------------
+ * 'table' extension
+ *----------------------------------------------------------------------------*/
+table.fancytree-ext-table {
+    font-size: 12pt;
+    border-collapse: collapse;
+}
+table.fancytree-ext-table span.fancytree-node {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    position: relative;
+}
+table.fancytree-ext-table td.fancytree-status-merged {
+    text-align: center;
+    font-style: italic;
+    color: silver;
+}
+table.fancytree-ext-table tr.fancytree-statusnode-error td.fancytree-status-merged {
+    color: red;
+}
+table.fancytree-ext-table.fancytree-ext-ariagrid.fancytree-cell-mode > tbody > tr.fancytree-active > td {
+    background-color: #eee;
+}
+table.fancytree-ext-table.fancytree-ext-ariagrid.fancytree-cell-mode > tbody > tr > td.fancytree-active-cell {
+    background-color: #cbe8f6;
+}
+table.fancytree-ext-table.fancytree-ext-ariagrid.fancytree-cell-mode.fancytree-cell-nav-mode > tbody > tr > td.fancytree-active-cell {
+    background-color: #3875d7;
+}
+/*------------------------------------------------------------------------------
+ * 'filter' extension
+ *----------------------------------------------------------------------------*/
+.fancytree-hide span.fancytree-title {
+    opacity: 0.7;
+}
+.fancytree-ext-filter-dimm tr.fancytree-submatch span.fancytree-title,
+.fancytree-ext-filter-dimm span.fancytree-node.fancytree-submatch span.fancytree-title {
+    color: black;
+    font-weight: normal;
+}
+.fancytree-ext-filter-dimm tr.fancytree-match span.fancytree-title,
+.fancytree-ext-filter-dimm span.fancytree-node.fancytree-match span.fancytree-title {
+    color: black;
+    font-weight: 500;
+}
+.fancytree-ext-filter-hide tr.fancytree-hide,
+.fancytree-ext-filter-hide span.fancytree-node.fancytree-hide {
+    display: none;
+}
+.fancytree-ext-filter-hide tr.fancytree-submatch span.fancytree-title,
+.fancytree-ext-filter-hide span.fancytree-node.fancytree-submatch span.fancytree-title {
+    color: silver;
+    font-weight: lighter;
+}
+.fancytree-ext-filter-hide tr.fancytree-match span.fancytree-title,
+.fancytree-ext-filter-hide span.fancytree-node.fancytree-match span.fancytree-title {
+    color: black;
+    font-weight: normal;
+}
+/* Hide expanders if all child nodes are hidden by filter */
+.fancytree-ext-filter-hide-expanders tr.fancytree-match span.fancytree-expander,
+.fancytree-ext-filter-hide-expanders span.fancytree-node.fancytree-match span.fancytree-expander {
+    visibility: hidden;
+}
+.fancytree-ext-filter-hide-expanders tr.fancytree-submatch span.fancytree-expander,
+.fancytree-ext-filter-hide-expanders span.fancytree-node.fancytree-submatch span.fancytree-expander {
+    visibility: visible;
+}
+.fancytree-ext-childcounter span.fancytree-icon,
+.fancytree-ext-filter span.fancytree-icon,
+.fancytree-ext-childcounter span.fancytree-custom-icon,
+.fancytree-ext-filter span.fancytree-custom-icon {
+    position: relative;
+}
+span.fancytree-childcounter + span.fancytree-childcounter {
+    display: none;
+}
+.fancytree-ext-childcounter span.fancytree-icon {
+    display: none;
+}
+.fancytree-ext-childcounter tr.fancytree-has-children span.fancytree-icon {
+    display: block;
+}
+.fancytree-ext-childcounter span.fancytree-icon {
+    height: 22px;
+    margin: 0;
+}
+.fancytree-ext-childcounter span.fancytree-childcounter,
+.fancytree-ext-filter span.fancytree-childcounter {
+    position: absolute;
+    top: -4px;
+    left: -12px;
+    color: #fff;
+    background: var(--theme-secondary-color);
+    width: auto;
+    height: 19px;
+    line-height: 1;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    padding: .25em .3em;
+    text-align: center;
+    font-size: 13px;
+    display: inline-block;
+}
+/*******************************************************************************
+ * Node titles
+ */
+span.fancytree-title {
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+span.fancytree-focused span.fancytree-title {
+    outline: unset;
+}
+span.fancytree-active span.fancytree-title {
+    background-color: #D4D4D4;
+}
+.fancytree-treefocus span.fancytree-active span.fancytree-title {
+    color: white;
+    background-color: #3875D7;
+}
+/*******************************************************************************
+ * 'table' extension
+ */
+table.fancytree-ext-table {
+    border-collapse: collapse;
+}
+table.fancytree-ext-table tbody tr.fancytree-focused {
+    background-color: unset;
+}

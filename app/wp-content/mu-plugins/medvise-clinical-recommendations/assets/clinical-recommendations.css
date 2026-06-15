@@ -1,0 +1,717 @@
+.med-cr-page,
+.med-cr-detail-page {
+    padding: 0 0 72px;
+    background:
+        radial-gradient(circle at top left, rgba(57, 119, 170, 0.10), transparent 28%),
+        linear-gradient(180deg, #f4f8ff 0%, #ffffff 34%);
+}
+
+.med-cr-hero {
+    position: relative;
+    z-index: 20;
+    padding: 64px 0 48px;
+}
+
+.med-cr-hero__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.med-cr-hero__eyebrow,
+.med-cr-detail__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(43, 108, 163, 0.10);
+    color: #2b6ca3;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.med-cr-hero__title,
+.med-cr-detail__title {
+    margin: 18px 0 14px;
+    color: #0f172a;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.04;
+    font-weight: 800;
+}
+
+.med-cr-hero__title {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.med-cr-hero__text {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #5e6b80;
+    font-size: 21px;
+    line-height: 1.55;
+}
+
+.med-cr-search {
+    position: relative;
+    z-index: 30;
+    max-width: 1240px;
+    margin: 34px auto 0;
+}
+
+.med-cr-search__shell {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr) 148px;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px;
+    border: 1px solid rgba(123, 145, 173, 0.22);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 22px 60px rgba(31, 58, 90, 0.10);
+    backdrop-filter: blur(10px);
+}
+
+.med-cr-search__specialty,
+.med-cr-search__input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.med-cr-search__specialty {
+    min-width: 0;
+    gap: 12px;
+    padding: 0 20px;
+    border-right: 1px solid rgba(123, 145, 173, 0.20);
+}
+
+.med-cr-search__specialty i,
+.med-cr-search__input-wrap i {
+    color: #2b6ca3;
+    font-size: 18px;
+}
+
+.med-cr-search__specialty select,
+.med-cr-search__input-wrap input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.med-cr-search__specialty select {
+    min-width: 0;
+    padding: 16px 0;
+    color: #183153;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.med-cr-search__input-wrap {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 auto;
+    gap: 14px;
+    padding: 0 18px;
+}
+
+.med-cr-search__input-wrap .ep-autosuggest-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.med-cr-search__input-wrap input {
+    display: block;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    min-width: 0;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 16px 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.med-cr-search__input-wrap input:focus,
+.med-cr-search__input-wrap input:hover,
+.med-cr-search__input-wrap input:active {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.med-cr-search__input-wrap input::placeholder {
+    color: #8b98aa;
+}
+
+.med-cr-search__hidden {
+    display: none;
+}
+
+.med-cr-search__submit {
+    border: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2b6ca3 0%, #3b86bd 100%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.med-cr-search__submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 28px rgba(43, 108, 163, 0.28);
+}
+
+.med-cr-autosuggest,
+.med-cr-search__input-wrap .ep-autosuggest {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    z-index: 80;
+    overflow: hidden;
+    border: 1px solid rgba(123, 145, 173, 0.20);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+}
+
+.med-cr-autosuggest__list,
+.med-cr-search__input-wrap .autosuggest-list {
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+}
+
+.med-cr-autosuggest__item + .med-cr-autosuggest__item,
+.med-cr-search__input-wrap .autosuggest-item + .autosuggest-item {
+    margin-top: 4px;
+}
+
+.med-cr-autosuggest__link,
+.med-cr-search__input-wrap .autosuggest-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    color: #0f172a;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.med-cr-autosuggest__link:hover,
+.med-cr-search__input-wrap .autosuggest-item.selected .autosuggest-link,
+.med-cr-search__input-wrap .autosuggest-link:hover {
+    background: #f3f8ff;
+}
+
+.med-cr-search__input-wrap .autosuggest-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.med-cr-search__input-wrap .autosuggest-item,
+.med-cr-search__input-wrap .autosuggest-item_title,
+.med-cr-search__input-wrap .autosuggest-item_text {
+    text-align: left;
+}
+
+.med-cr-search__input-wrap .autosuggest-item.to-all-results {
+    display: none;
+}
+
+.med-cr-autosuggest__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.med-cr-autosuggest__meta,
+.med-cr-autosuggest__excerpt {
+    color: #66758a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.med-cr-autosuggest__footer,
+.med-cr-autosuggest__empty {
+    padding: 14px 20px 18px;
+    border-top: 1px solid rgba(123, 145, 173, 0.16);
+    color: #2b6ca3;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.med-cr-autosuggest__footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.med-cr-layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.med-cr-sidebar {
+    position: sticky;
+    top: 32px;
+}
+
+.med-cr-sidebar__card {
+    padding: 28px;
+    border: 1px solid rgba(123, 145, 173, 0.18);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 42px rgba(31, 58, 90, 0.08);
+}
+
+.med-cr-sidebar__title {
+    margin: 0 0 18px;
+    color: #0f172a;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.med-cr-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.med-cr-sidebar__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 18px;
+    color: #23354e;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.med-cr-sidebar__link:hover {
+    background: #f4f8ff;
+    transform: translateX(2px);
+}
+
+.med-cr-sidebar__link.is-active {
+    background: rgba(43, 108, 163, 0.10);
+    color: #184d79;
+}
+
+.med-cr-sidebar__name {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.med-cr-sidebar__count {
+    min-width: 34px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(43, 108, 163, 0.10);
+    color: #2b6ca3;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.med-cr-results__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.med-cr-results__title {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 800;
+}
+
+.med-cr-results__subtitle {
+    margin: 12px 0 0;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.med-cr-cards {
+    display: grid;
+    gap: 1px;
+}
+
+.med-cr-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 16px;
+    padding: 20px 24px 18px;
+    border: 1px solid rgba(123, 145, 173, 0.18);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 8px 18px rgba(31, 58, 90, 0.04);
+}
+
+.med-cr-card__title {
+    margin: 0;
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.med-cr-card__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.med-cr-card__title a:hover {
+    color: #2b6ca3;
+}
+
+.med-cr-card__badges,
+.med-cr-detail__meta,
+.med-cr-detail__specialties,
+.med-cr-card__specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.med-cr-card__badges,
+.med-cr-card__specialties {
+    margin-top: 12px;
+}
+
+.med-cr-badge,
+.med-cr-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.med-cr-badge--year {
+    background: rgba(59, 130, 246, 0.10);
+    color: #2563eb;
+}
+
+.med-cr-badge--age {
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.med-cr-badge--date {
+    background: rgba(100, 116, 139, 0.10);
+    color: #475569;
+}
+
+.med-cr-tag {
+    background: rgba(226, 232, 240, 0.72);
+    color: #334155;
+    text-decoration: none;
+}
+
+.med-cr-tag:hover {
+    background: rgba(43, 108, 163, 0.12);
+    color: #1d5a88;
+}
+
+.med-cr-card__excerpt {
+    margin: 18px 0 0;
+    color: #5f6d82;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.med-cr-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    align-self: start;
+    min-width: 126px;
+}
+
+.med-cr-card__pdf,
+.med-cr-detail__pdf,
+.med-cr-card__more,
+.med-cr-detail__back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 12px 18px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.med-cr-card__pdf,
+.med-cr-detail__pdf {
+    border: 1px solid rgba(43, 108, 163, 0.16);
+    background: #fff;
+    color: #c63535;
+}
+
+.med-cr-card__more,
+.med-cr-detail__back {
+    background: rgba(43, 108, 163, 0.10);
+    color: #1d5a88;
+}
+
+.med-cr-card__pdf:hover,
+.med-cr-detail__pdf:hover,
+.med-cr-card__more:hover,
+.med-cr-detail__back:hover {
+    text-decoration: none;
+    opacity: 0.92;
+}
+
+.med-cr-empty {
+    padding: 34px 30px;
+    border: 1px dashed rgba(123, 145, 173, 0.32);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.82);
+    text-align: center;
+}
+
+.med-cr-empty h3 {
+    margin: 0 0 10px;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.med-cr-empty p {
+    margin: 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.med-cr-pagination {
+    margin-top: 24px;
+}
+
+.med-cr-pagination .page-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.med-cr-pagination .page-numbers li {
+    margin: 0;
+}
+
+.med-cr-pagination .page-numbers a,
+.med-cr-pagination .page-numbers span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(123, 145, 173, 0.18);
+    color: #1e293b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.med-cr-pagination .page-numbers .current {
+    background: #2b6ca3;
+    color: #fff;
+    border-color: #2b6ca3;
+}
+
+.med-cr-detail-page {
+    padding-top: 42px;
+}
+
+.med-cr-detail {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.med-cr-detail__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.med-cr-detail__header {
+    padding: 34px 38px;
+    border: 1px solid rgba(123, 145, 173, 0.18);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 40px rgba(31, 58, 90, 0.08);
+}
+
+.med-cr-detail__meta,
+.med-cr-detail__specialties {
+    margin-top: 18px;
+}
+
+.med-cr-detail__content {
+    margin-top: 22px;
+    padding: 34px 38px;
+    border: 1px solid rgba(123, 145, 173, 0.18);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 40px rgba(31, 58, 90, 0.06);
+    color: #0f172a;
+    font-size: 17px;
+    line-height: 1.78;
+}
+
+.med-cr-detail__content h2,
+.med-cr-detail__content h3,
+.med-cr-detail__content h4 {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.med-cr-detail__content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+    border-collapse: collapse;
+}
+
+.med-cr-detail__content table th,
+.med-cr-detail__content table td {
+    min-width: 160px;
+    padding: 10px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.32);
+}
+
+.med-cr-detail__content details {
+    margin: 18px 0;
+    padding: 14px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 18px;
+    background: #f8fbff;
+}
+
+.med-cr-detail__content summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.med-cr-detail__content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 18px auto;
+}
+
+@media (max-width: 991px) {
+    .med-cr-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .med-cr-sidebar {
+        position: static;
+    }
+
+    .med-cr-search__shell {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .med-cr-search__specialty {
+        border-right: 0;
+        border-bottom: 1px solid rgba(123, 145, 173, 0.18);
+    }
+
+    .med-cr-card {
+        grid-template-columns: 1fr;
+    }
+
+    .med-cr-card__actions {
+        flex-direction: row;
+        min-width: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .med-cr-hero {
+        padding-top: 38px;
+    }
+
+    .med-cr-hero__text {
+        font-size: 17px;
+    }
+
+    .med-cr-sidebar__card,
+    .med-cr-card,
+    .med-cr-detail__header,
+    .med-cr-detail__content,
+    .med-cr-empty {
+        padding: 22px 20px;
+        border-radius: 22px;
+    }
+
+    .med-cr-card__title {
+        font-size: 20px;
+    }
+
+    .med-cr-detail__nav {
+        flex-direction: column;
+    }
+
+    .med-cr-card__pdf,
+    .med-cr-detail__pdf,
+    .med-cr-card__more,
+    .med-cr-detail__back {
+        width: 100%;
+    }
+}

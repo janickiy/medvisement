@@ -1,0 +1,16 @@
+services:
+  libook-scraper:
+    build: .
+    ports:
+      - "5050:5000"
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - medvisement
+
+networks:
+  medvisement:
+    external: true
+    name: medvisement1_webnet

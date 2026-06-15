@@ -1,0 +1,83 @@
+# Translation of Plugins - Simple Taxonomy Ordering - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Simple Taxonomy Ordering - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-05-27 18:28:02+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Simple Taxonomy Ordering - Stable (latest release)\n"
+
+#: lib/options.php:129
+msgid "Enable or disable taxonomies from being orderable by using the dropdown."
+msgstr "Включите или отключите упорядочивание таксономий используя раскрывающийся список."
+
+#. Author of the plugin
+msgid "YIKES, Inc."
+msgstr "YIKES, Inc."
+
+#. Description of the plugin
+msgid "Custom drag & drop taxonomy ordering."
+msgstr "Сортировка элементов таксономий путем перетаскивания"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.yikesinc.com"
+msgstr "http://www.yikesinc.com "
+
+#: yikes-custom-taxonomy-order.php:260
+msgid "More Plugins by YIKES"
+msgstr "Еще плагины от YIKES"
+
+#: yikes-custom-taxonomy-order.php:259
+msgid "Settings"
+msgstr "Настройки"
+
+#: yikes-custom-taxonomy-order.php:259
+msgid "Simple Taxonomy Ordering Settings"
+msgstr "Настройки Simple Taxonomy Ordering"
+
+#: yikes-custom-taxonomy-order.php:121
+msgid "Simple Taxonomy Ordering Demo"
+msgstr "Демонстрация плагина «Simple Taxonomy Ordering»"
+
+#: yikes-custom-taxonomy-order.php:121
+msgid "Example"
+msgstr "Пример"
+
+#: yikes-custom-taxonomy-order.php:121
+msgid "To reposition a taxonomy in the list, simply click on a taxonomy and drag & drop it into the desired position. Each time you reposition a taxonomy, the data will update in the database and on the front end of your site."
+msgstr "Чтобы поменять рубрики местами, просто нажмите на нужную рубрику и перетащите ее на нужное место. Каждый раз, когда вы перемещаете рубрику, данные будут обновляться в базе данных и будет изменена сортировка рубрик на вашем сайте."
+
+#: yikes-custom-taxonomy-order.php:120
+msgid "Taxonomy Ordering"
+msgstr "Сортировка элементов таксономии"
+
+#: lib/options.php:160
+msgid "No Taxonomies Found."
+msgstr "Таксономий не найдено."
+
+#: lib/options.php:157
+msgid "Select which taxonomies you would like to enable drag & drop sorting on."
+msgstr "Выберите, для каких таксономий вы хотите включить сортировку путем перетаскивания рубрик (способ  drag & drop)."
+
+#: lib/options.php:118
+msgid "Enabled Taxonomies"
+msgstr "Включенные таксономии"
+
+#. Plugin Name of the plugin
+#: lib/options.php:90
+msgid "YIKES Simple Taxonomy Ordering"
+msgstr "YIKES Simple Taxonomy Ordering"
+
+#: lib/options.php:74 lib/options.php:75
+msgid "Simple Tax. Ordering"
+msgstr "Сортировка таксономий"
+
+#. translators: placeholders are links
+#: lib/options.php:60
+msgid "Simple Taxonomy Ordering was created by %1$s. If you are enjoying it, please leave us a %2$s review!"
+msgstr "Плагин Simple Taxonomy Ordering создан %1$s. Если он вам нравится, пожалуйста добавьте свой отзыв с оценкой %2$s!"

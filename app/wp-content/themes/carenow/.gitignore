@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+/dist
+/.idea
+/.vscode
+/nbproject
+package-lock.json
+composer.lock
+/build
+sftp-config.json

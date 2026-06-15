@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-03-26 14:04+0200\n"
+"PO-Revision-Date: 2022-03-26 14:04+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_html__;esc_attr_e;esc_html_e;_x;"
+"_n\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: src/Addons/RoleBasedPricing/RoleBasedPricingAddon.php:16
+msgid "Role based subscriptions discounts"
+msgstr ""
+
+#: src/Addons/RoleBasedPricing/RoleBasedPricingAddon.php:284
+msgid "Invalid role"
+msgstr ""
+
+#: src/Addons/RoleBasedPricing/RoleBasedPricingAddon.php:290
+msgid "Invalid nonce"
+msgstr ""
+
+#: src/Admin/Export/Woocommerce.php:37
+msgid "Discounts type"
+msgstr ""
+
+#: src/Admin/Export/Woocommerce.php:38
+msgid "Fixed subscription discounts"
+msgstr ""
+
+#: src/Admin/Export/Woocommerce.php:39
+msgid "Percentage subscription discounts"
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:28
+msgid "Discounts for WooCommerce Subscriptions"
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:76
+msgid "Fixed subscriptions discounts"
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:79
+msgid ""
+"The format for the rules must be the following: quantity:price,quantity:"
+"price. For example: \"10:5,20:15\" where 10 and 20 are quantities and 5 and "
+"15 are prices for those quantities."
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:83
+msgid "Percentage subscriptions discounts"
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:86
+msgid ""
+"Format for the rules must be the following: quantity:percent_discount,"
+"quantity:percent_discount. For example: \"10:5,20:15\" where 10 and 20 are "
+"quantities and 5 and 15 are amounts of discount."
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:90 src/Admin/Import/Woocommerce.php:26
+#: src/Admin/Import/Woocommerce.php:45
+#: views/addons/role-based-pricing/simple/add-price-rules.php:17
+#: views/addons/role-based-pricing/variation/add-price-rules.php:19
+#: views/admin/add-price-rules-variation.php:28
+#: views/admin/add-price-rules.php:29
+msgid "Discounts pricing type"
+msgstr ""
+
+#: src/Admin/Import/WPAllImport.php:99
+msgid "The field must be either \"fixed\" or \"percentage\"."
+msgstr ""
+
+#: src/Admin/Import/Woocommerce.php:27 src/Admin/Import/Woocommerce.php:43
+msgid "Fixed discounts"
+msgstr ""
+
+#: src/Admin/Import/Woocommerce.php:28 src/Admin/Import/Woocommerce.php:44
+msgid "Percentage discounts"
+msgstr ""
+
+#: src/Admin/ProductManagers/ProductManager.php:49
+msgid "Subscription discounts"
+msgstr ""
+
+#: src/Admin/Subscription/SubscriptionPage.php:53
+#: views/admin/order-discounts-sequence.php:33
+msgid "Current discount rate that will be applied with next renewal."
+msgstr ""
+
+#: src/Admin/Subscription/SubscriptionPage.php:53
+msgid "Renewal Discount"
+msgstr ""
+
+#: src/Admin/Subscription/SubscriptionPage.php:102
+#: src/Admin/Subscription/SubscriptionPage.php:116
+msgid "Apply discounts"
+msgstr ""
+
+#: src/Admin/Subscription/SubscriptionPage.php:155
+#, php-format
+msgid "%1$s %2$s have been applied discounts"
+msgstr ""
+
+#: src/Admin/Subscription/SubscriptionPage.php:155
+msgid "subscription"
+msgstr ""
+
+#: src/Frontend/MyAccount.php:35
+msgid "Current discount"
+msgstr ""
+
+#: src/Frontend/MyAccount.php:56
+msgid "Discount upgrade"
+msgstr ""
+
+#: src/Frontend/MyAccount.php:95
+#, php-format
+msgid "In %1$d renewals to %2$d%%"
+msgstr ""
+
+#: src/Managers/RenewalManager.php:59
+msgid "A new discount tier started to apply from the last renewal."
+msgstr ""
+
+#: src/Settings/Settings.php:49
+msgid "Discounts for WooCommerce Subscriptions Settings"
+msgstr ""
+
+#: src/Settings/Settings.php:50
+msgid ""
+"This section controls how the discounts for woocommerce subscriptions will "
+"look and behave at your store."
+msgstr ""
+
+#: src/Settings/Settings.php:56
+msgid "Show discount table on product page"
+msgstr ""
+
+#: src/Settings/Settings.php:62
+msgid "Discounts explainer"
+msgstr ""
+
+#: src/Settings/Settings.php:66
+msgid ""
+"Write down a short explanation of how your discounts work, which will be "
+"displayed right above the discount table on the product page."
+msgstr ""
+
+#: src/Settings/Settings.php:70
+msgid "Table position"
+msgstr ""
+
+#: src/Settings/Settings.php:74
+msgid "Above buy button"
+msgstr ""
+
+#: src/Settings/Settings.php:75
+msgid "Below buy button"
+msgstr ""
+
+#: src/Settings/Settings.php:76
+msgid "Above add to cart form"
+msgstr ""
+
+#: src/Settings/Settings.php:77
+msgid "Below add to cart form"
+msgstr ""
+
+#: src/Settings/Settings.php:78
+msgid "Above product title"
+msgstr ""
+
+#: src/Settings/Settings.php:79
+msgid "Before product summary"
+msgstr ""
+
+#: src/Settings/Settings.php:80
+msgid "After product summary"
+msgstr ""
+
+#: src/Settings/Settings.php:82
+msgid ""
+"Pick up a suitable location to place a discount table on the subscription "
+"product page."
+msgstr ""
+
+#: src/Settings/Settings.php:86
+msgid "Renewal sequence number column title"
+msgstr ""
+
+#: src/Settings/Settings.php:89
+msgid "Subscription {period}"
+msgstr ""
+
+#: src/Settings/Settings.php:90
+msgid ""
+"Name of the first column in the table, which indicates when the discount "
+"will be applied. Use a {period} variable to clearly indicate at what time "
+"discounts start."
+msgstr ""
+
+#: src/Settings/Settings.php:94
+msgid "Price column title"
+msgstr ""
+
+#: src/Settings/Settings.php:97 src/Settings/Settings.php:218
+#: views/addons/role-based-pricing/simple/add-price-rules.php:55
+#: views/addons/role-based-pricing/simple/add-price-rules.php:74
+#: views/addons/role-based-pricing/variation/add-price-rules.php:58
+#: views/addons/role-based-pricing/variation/add-price-rules.php:77
+#: views/admin/add-price-rules-variation.php:69
+#: views/admin/add-price-rules-variation.php:88
+#: views/admin/add-price-rules.php:64 views/admin/add-price-rules.php:83
+msgid "Price"
+msgstr ""
+
+#: src/Settings/Settings.php:98
+msgid ""
+"Text for the last column, where the subscription renewal price (incl. "
+"applied discount) is indicated."
+msgstr ""
+
+#: src/Settings/Settings.php:103
+msgid "Show column with a percentage discount rate"
+msgstr ""
+
+#: src/Settings/Settings.php:109
+msgid "Discount column title"
+msgstr ""
+
+#: src/Settings/Settings.php:112 src/Settings/Settings.php:222
+msgid "Discount (%)"
+msgstr ""
+
+#: src/Settings/Settings.php:113
+msgid ""
+"ext for the second column, where clients can see percentage discount for "
+"each sequence."
+msgstr ""
+
+#: src/Settings/Settings.php:123
+msgid "Role-based pricing"
+msgstr ""
+
+#: src/Settings/Settings.php:128
+#: views/addons/role-based-pricing/simple/role-based-block.php:20
+#: views/addons/role-based-pricing/variation/role-based-block.php:25
+msgid "Role-based discounts"
+msgstr ""
+
+#: src/Settings/Settings.php:132
+msgid ""
+"apply specialized discounts for users with specific roles (has higher "
+"priority than regular discounts)."
+msgstr ""
+
+#: src/Settings/Settings.php:145
+msgid "All Products for Subscriptions"
+msgstr ""
+
+#: src/Settings/Settings.php:150
+msgid "Enable All Products for Subscriptions Add-on"
+msgstr ""
+
+#: src/Settings/Settings.php:154
+msgid ""
+"Will enable discount table management for Simple, Variable, and Bundle "
+"product types. Please, keep the discount table empty for products w/o "
+"subscription plan."
+msgstr ""
+
+#: src/Settings/Settings.php:188
+msgid "Subscriptions Discounts"
+msgstr ""
+
+#: src/Settings/Settings.php:216
+#: views/addons/role-based-pricing/simple/add-price-rules.php:51
+#: views/addons/role-based-pricing/simple/add-price-rules.php:70
+#: views/addons/role-based-pricing/simple/add-price-rules.php:101
+#: views/addons/role-based-pricing/simple/add-price-rules.php:121
+#: views/addons/role-based-pricing/variation/add-price-rules.php:54
+#: views/addons/role-based-pricing/variation/add-price-rules.php:73
+#: views/addons/role-based-pricing/variation/add-price-rules.php:104
+#: views/addons/role-based-pricing/variation/add-price-rules.php:124
+#: views/admin/add-price-rules-variation.php:65
+#: views/admin/add-price-rules-variation.php:85
+#: views/admin/add-price-rules-variation.php:117
+#: views/admin/add-price-rules-variation.php:139
+#: views/admin/add-price-rules.php:60 views/admin/add-price-rules.php:79
+#: views/admin/add-price-rules.php:109 views/admin/add-price-rules.php:129
+msgid "Renewal sequence number"
+msgstr ""
+
+#: src/SubscriptionsDiscountsPlugin.php:48
+msgid "Settings"
+msgstr ""
+
+#: src/SubscriptionsDiscountsPlugin.php:49
+msgid "Documentation"
+msgstr ""
+
+#: src/SubscriptionsDiscountsPlugin.php:113
+#, php-format
+msgid ""
+"The Discounts for WooCommerce Subscriptions plugin requires %s plugin to be "
+"active!"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:12
+#: views/addons/role-based-pricing/variation/add-price-rules.php:13
+#: views/admin/add-price-rules-variation.php:14
+#: views/admin/add-price-rules.php:11
+msgid ""
+"to set up progressive discounts for renewal payments, click on \"new "
+"discount rule.\" In the first box, indicate the renewal sequence number from "
+"which the discount begins and specify the discount value in the second box. "
+"To create multilevel discounts, add more rules and set from what renewal "
+"sequence they should apply."
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:24
+#: views/addons/role-based-pricing/variation/add-price-rules.php:26
+#: views/admin/add-price-rules-variation.php:36
+#: views/admin/add-price-rules.php:36
+msgid "Fixed"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:30
+#: views/addons/role-based-pricing/variation/add-price-rules.php:32
+#: views/admin/add-price-rules-variation.php:42
+#: views/admin/add-price-rules.php:40
+msgid "Percentage"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:42
+#: views/addons/role-based-pricing/simple/add-price-rules.php:92
+#: views/addons/role-based-pricing/variation/add-price-rules.php:45
+#: views/addons/role-based-pricing/variation/add-price-rules.php:95
+#: views/admin/add-price-rules-variation.php:55
+#: views/admin/add-price-rules-variation.php:107
+#: views/admin/add-price-rules.php:51 views/admin/add-price-rules.php:100
+msgid "Discounts"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:83
+#: views/addons/role-based-pricing/simple/add-price-rules.php:136
+#: views/addons/role-based-pricing/variation/add-price-rules.php:86
+#: views/addons/role-based-pricing/variation/add-price-rules.php:139
+#: views/admin/add-price-rules-variation.php:99
+#: views/admin/add-price-rules-variation.php:156
+#: views/admin/add-price-rules.php:92 views/admin/add-price-rules.php:142
+msgid "New discount rule"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:105
+#: views/admin/add-price-rules-variation.php:144
+#: views/admin/add-price-rules.php:133
+msgid "Discount"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/add-price-rules.php:125
+#: views/addons/role-based-pricing/variation/add-price-rules.php:108
+#: views/addons/role-based-pricing/variation/add-price-rules.php:128
+#: views/admin/add-price-rules-variation.php:122
+#: views/admin/add-price-rules.php:113
+msgid "Percent discount"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/role-based-block.php:49
+#: views/addons/role-based-pricing/variation/role-based-block.php:54
+msgid ""
+"Set up separate discounts for different roles of customers. Choose a role "
+"and click the \"Setup for role\" button."
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/role-based-block.php:51
+msgid ""
+"If you do not use this feature, you can disable this functionality at the "
+"settings to not complicate the interface. "
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/role-based-block.php:63
+#: views/addons/role-based-pricing/variation/role-based-block.php:68
+msgid "Setup for role"
+msgstr ""
+
+#: views/addons/role-based-pricing/simple/role.php:29
+#: views/addons/role-based-pricing/variation/role.php:30
+msgid "Remove"
+msgstr ""
+
+#: views/admin/alerts/activation-alert.php:14
+msgid ""
+"Thanks for installing Discounts for WooCommerce Subscriptions! You can "
+"customize it "
+msgstr ""
+
+#: views/admin/alerts/activation-alert.php:15
+msgid "here"
+msgstr ""
+
+#: views/admin/order-discounts-sequence.php:14
+msgid "Discounts sequence"
+msgstr ""
+
+#: views/admin/order-discounts-sequence.php:19
+msgid "Without a discount"
+msgstr ""
+
+#: views/admin/order-discounts-sequence.php:46
+msgid "Outdated"
+msgstr ""
+
+#: views/admin/order-discounts-sequence.php:46
+#, php-format
+msgid "Will be applied on the %1$s renewal. Now: %2$d/%3$d"
+msgstr ""

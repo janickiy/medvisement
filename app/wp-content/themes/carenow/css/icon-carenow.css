@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'carenow';
+  src:  url('../fonts/carenow.eot?2wryvu');
+  src:  url('../fonts/carenow.eot?2wryvu#iefix') format('embedded-opentype'),
+    url('../fonts/carenow.ttf?2wryvu') format('truetype'),
+    url('../fonts/carenow.woff?2wryvu') format('woff'),
+    url('../fonts/carenow.svg?2wryvu#carenow') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="carenow-icon-"], [class*=" carenow-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'carenow' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.carenow-icon-cancel:before {
+  content: "\e904";
+}
+.carenow-icon-arrow-left:before {
+  content: "\e905";
+}
+.carenow-icon-arrow-right:before {
+  content: "\e906";
+}
+.carenow-icon-arrow-right-long:before {
+  content: "\e908";
+}
+.carenow-icon-arrow-right-small:before {
+  content: "\e909";
+}
+.carenow-icon-icon-center1:before {
+  content: "\e90a";
+}
+.carenow-icon-icon-mail1:before {
+  content: "\e90b";
+}
+.carenow-icon-icon-pin1:before {
+  content: "\e90c";
+}
+.carenow-icon-ios-checkmark:before {
+  content: "\e90d";
+}
+.carenow-icon-mail:before {
+  content: "\e90f";
+}
+.carenow-icon-map:before {
+  content: "\e910";
+}
+.carenow-icon-medal1:before {
+  content: "\e911";
+}
+.carenow-icon-metro-file-pdf:before {
+  content: "\e915";
+}
+.carenow-icon-phone2:before {
+  content: "\e917";
+}
+.carenow-icon-plus:before {
+  content: "\e918";
+}
+.carenow-icon-clock:before {
+  content: "\f017";
+}
+.carenow-icon-clock1:before {
+  content: "\f018";
+}
+.carenow-icon-play-primary:before {
+  content: "\f04b";
+}
+.carenow-icon-chevron-left:before {
+  content: "\f053";
+}
+.carenow-icon-chevron-right:before {
+  content: "\f054";
+}
+.carenow-icon-calendar-alt:before {
+  content: "\f073";
+}
+.carenow-icon-phone:before {
+  content: "\f095";
+}
+.carenow-icon-phone1:before {
+  content: "\f096";
+}
+.carenow-icon-caret-down:before {
+  content: "\f0d7";
+}
+.carenow-icon-caret-up:before {
+  content: "\f0d8";
+}
+.carenow-icon-caret-down1:before {
+  content: "\f0d9";
+}
+.carenow-icon-caret-up1:before {
+  content: "\f0da";
+}
+.carenow-icon-caret-down2:before {
+  content: "\f0db";
+}
+.carenow-icon-caret-left:before {
+  content: "\f0dc";
+}
+.carenow-icon-sort-down:before {
+  content: "\f0dd";
+}
+.carenow-icon-sort-up:before {
+  content: "\f0de";
+}
+.carenow-icon-sort-down1:before {
+  content: "\f0df";
+}
+.carenow-icon-envelope:before {
+  content: "\f0e0";
+}
+.carenow-icon-sort-up1:before {
+  content: "\f0e1";
+}
+.carenow-icon-envelope1:before {
+  content: "\f0e2";
+}
+.carenow-icon-sort-down2:before {
+  content: "\f0e3";
+}
+.carenow-icon-caret-right:before {
+  content: "\f0e4";
+}
+.carenow-icon-angle-double-left:before {
+  content: "\f100";
+}
+.carenow-icon-angle-double-right:before {
+  content: "\f101";
+}
+.carenow-icon-angle-double-left1:before {
+  content: "\f102";
+}
+.carenow-icon-angle-double-right1:before {
+  content: "\f103";
+}
+.carenow-icon-angle-left:before {
+  content: "\f104";
+}
+.carenow-icon-angle-right:before {
+  content: "\f105";
+}
+.carenow-icon-angle-up:before {
+  content: "\f106";
+}
+.carenow-icon-angle-down:before {
+  content: "\f107";
+}
+.carenow-icon-angle-left1:before {
+  content: "\f108";
+}
+.carenow-icon-angle-right1:before {
+  content: "\f109";
+}
+.carenow-icon-angle-up1:before {
+  content: "\f10a";
+}
+.carenow-icon-angle-down1:before {
+  content: "\f10b";
+}
+.carenow-icon-021-phone-1:before {
+  content: "\f11f";
+}
+.carenow-icon-022-quotation:before {
+  content: "\f120";
+}
+.carenow-icon-play-circle-primary:before {
+  content: "\f144";
+}
+.carenow-icon-caret-square-right-primary:before {
+  content: "\f152";
+}
+.carenow-icon-long-arrow-left:before {
+  content: "\f177";
+}
+.carenow-icon-long-arrow-right1:before {
+  content: "\f178";
+}
+.carenow-icon-long-arrow-left1:before {
+  content: "\f179";
+}
+.carenow-icon-long-arrow-right2:before {
+  content: "\f17a";
+}
+.carenow-icon-paper-plane:before {
+  content: "\f1d8";
+}
+.carenow-icon-paper-plane1:before {
+  content: "\f1d9";
+}
+.carenow-icon-envelope-open1:before {
+  content: "\f2b7";
+}
+.carenow-icon-envelope-open12:before {
+  content: "\f2b9";
+}
+.carenow-icon-long-arrow-alt-left:before {
+  content: "\f30a";
+}
+.carenow-icon-long-arrow-alt-right:before {
+  content: "\f30b";
+}
+.carenow-icon-chevron-double-left:before {
+  content: "\f323";
+}
+.carenow-icon-chevron-double-right:before {
+  content: "\f324";
+}
+.carenow-icon-chevron-double-left1:before {
+  content: "\f325";
+}
+.carenow-icon-chevron-double-right1:before {
+  content: "\f326";
+}
+.carenow-icon-caret-circle-left-primary:before {
+  content: "\f32e";
+}
+.carenow-icon-map-marker-alt1:before {
+  content: "\f3c6";
+}
+.carenow-icon-map-marker-alt12:before {
+  content: "\f3c8";
+}
+.carenow-icon-phone-alt1:before {
+  content: "\f87a";
+}
+.carenow-icon-phone-alt12:before {
+  content: "\f87c";
+}
+.carenow-icon-play-secondary:before {
+  content: "\10f04b";
+}
+.carenow-icon-custom-arrow-right:before {
+  content: "\e900";
+}
+.carenow-icon-custom-arrow-left:before {
+  content: "\e901";
+}
+.carenow-icon-Icon-awesome-arrow-left:before {
+  content: "\e902";
+}
+.carenow-icon-Icon-awesome-arrow-right:before {
+  content: "\e903";
+}
+.carenow-icon-Icon-zocial-call:before {
+  content: "\e907";
+}
+.carenow-icon-medal:before {
+  content: "\e975";
+}
+.carenow-icon-search-01:before {
+  content: "\e979";
+}
+.carenow-icon-envelope-open:before {
+  content: "\f2b6";
+}
+.carenow-icon-envelope-open11:before {
+  content: "\f2b8";
+}
+.carenow-icon-map-marker-alt:before {
+  content: "\f3c5";
+}
+.carenow-icon-map-marker-alt11:before {
+  content: "\f3c7";
+}
+.carenow-icon-phone-alt:before {
+  content: "\f879";
+}
+.carenow-icon-phone-alt11:before {
+  content: "\f87b";
+}
+.carenow-icon-play-secondary1:before {
+  content: "\10f04c";
+}
+.carenow-icon-icon-center:before {
+  content: "\e91b";
+}
+.carenow-icon-icon-mail:before {
+  content: "\e91c";
+}
+.carenow-icon-icon-pin:before {
+  content: "\e91d";
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "medvise-seolimit/medvise",
+  "version": "0.1.0",
+  "title": "Ограничение показа статьи",
+  "category": "text",
+  "icon": "lock",
+  "description": "Вставьте встатью и контент будет обрезан до этого блока, если у пользователя нет доступа или происходит индексация поисковиком",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "medvise",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

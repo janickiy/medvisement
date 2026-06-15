@@ -1,0 +1,1 @@
+(()=>{var __webpack_modules__={"./src/front.js"(){eval("{\n\n//# sourceURL=webpack://carenow/./src/front.js?\n}")}},__webpack_exports__={};__webpack_modules__["./src/front.js"]()})();

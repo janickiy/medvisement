@@ -1,0 +1,73 @@
+*** Discounts for WooCommerce Subscriptions ***
+
+2023-08-28 - version 3.1.0
+* New: Support of Recurring type of coupons
+* Fix: Double applying discounts
+* Update: Cart and Checkout blocks compatibility
+* Update: WooCommerce Subscriptions 5.6.0 compatibility
+* Update: WordPress 6.4 compatibility
+* Update: WooCommerce 8.3 compatibility
+
+2023-08-28 - version 3.0.0
+* New: Adding Discounts capabilities to Coupons
+* New: Editing subscription cost starting from 1st payment
+* Fix: Cart totals when taxes included
+* Fix: Values calculated in the discount table on the product page
+* Fix: Set discounted price as sale price for first payment
+
+2023-05-05 - version 2.4.1
+* Update: High-Performance Order Storage compatibility
+* Update: WooCommerce Subscriptions 5.0 compatibility
+
+2023-03-15 - version 2.4.0
+* Fix: Issue when failed renewal orders count for discount upgrade
+* Fix: Issue when sale price counted as based price whenever discounts proceeds
+* Fix: Solved problem with inappropriate "+/-" signs on user account level
+
+2022-11-13 - version 2.3.0
+* New: Preventing subscription payment method switching to manual when applying 100% discount
+* Fix: Few more errors when the product with a discount was permanently removed
+
+2022-10-31 - version 2.2.0
+* New: Regular and Sale price for Role-based pricing part
+* New: Feature to 'remove discount' from subscriptions
+* Fix: Error when product with discount was permanently removed
+
+2022-08-14 - version 2.1.2
+* Fix: Zero discounts
+* Fix: All Product for Subscription Integration
+
+2022-07-14 - version 2.1.1
+* Fix: Error on user-account level (for non-discounted subscriptions)
+* Fix: Disabling discount's fields for non-discount subscriptions
+
+2022-06-01 - version 2.1.0
+* Fix: 0100% discount on user account bug
+* Fix: Next renewal cost adjusted on initial payment (cart and checkout)
+* Fix: Critical error when unable to calculate the discount
+* Minor improvements on wp-admin side and user account
+
+2022-04-16 - version 2.0.2
+* Fix: Switching between subscriptions
+* Fix: Issue when discounts didn't save for variable subscription
+
+2022-04-05 - version 2.0.1
+* Fix: Role with a space in the name
+* Fix: Integration themes bug
+
+2022-03-26 - version 2.0.0
+* New: added All Products For Subscription compatibility
+* Fix: Bug fixes
+* Minor improvements
+
+2022-01-23 - version 1.1.1
+* Fix: PHP8 compatibility issue
+* Raise supported Woo version to 6.2
+
+2022-01-18 - version 1.1.0
+* Fix: Deactivation error
+* Minor improvements
+* Raise supported Woo version to 6.1
+
+2021-10-19 - version 1.0.0
+* Initial Release

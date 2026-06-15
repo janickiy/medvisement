@@ -1,0 +1,267 @@
+services:
+
+  nginx:
+    image: nginx:1.26.1
+    restart: always
+    environment:
+      SERVER_NAME: ${SERVER_NAME}
+      ES_INDEX: ${ES_INDEX}
+      NGINX_CLIENT_MAX_BODY_SIZE: ${NGINX_CLIENT_MAX_BODY_SIZE}
+      OTP_WM_CHANNEL_PORT: ${OTP_WM_CHANNEL_PORT}
+      OTP_WM_WEBSOCKET_PORT: ${OTP_WM_WEBSOCKET_PORT}
+      OTP_WM_HTTP_PORT: ${OTP_WM_HTTP_PORT}
+    ports:
+      - "${NGINX_HTTP_PORT}:80"
+      - "${NGINX_HTTPS_PORT}:443"
+      - "${NGINX_ELASTIC_PORT}:9100"
+    volumes:
+      - ./app:/var/www/html
+      - ./docker/nginx/templates:/etc/nginx/templates
+      - ./docker/nginx/auth:/etc/nginx/auth
+      - ./docker/nginx/ssl:/etc/nginx/ssl
+      - ./docker/nginx/www:/var/www/certbot
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      - php
+      - python
+      - phpmyadmin
+    networks:
+      - webnet
+
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+      args:
+        APP_UID: ${APP_UID}
+        APP_GID: ${APP_GID}
+        APP_USER: ${APP_USER}
+    restart: always
+    user: "${APP_UID}:${APP_GID}"
+    working_dir: /var/www/html
+    environment:
+      SERVER_NAME: ${SERVER_NAME}
+      OTP_WM_CHANNEL_PORT: ${OTP_WM_CHANNEL_PORT}
+      OTP_WM_WEBSOCKET_PORT: ${OTP_WM_WEBSOCKET_PORT}
+      OTP_WM_HTTP_PORT: ${OTP_WM_HTTP_PORT}
+    volumes:
+      - ./app:/var/www/html
+      - ./parser:/var/www/parser:ro
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/php/php-fpm.d/global.conf:/usr/local/etc/php-fpm.d/global.conf
+      - ./docker/php/php-fpm.d/medvisement.conf:/usr/local/etc/php-fpm.d/medvisement.conf
+      - ./docker/php/msmtprc:/etc/msmtprc
+      - ./scripts:/scripts
+      - ./app-scripts:/var/www/html/app-scripts
+      - ./git-auth/.netrc:/home/medvisement/.netrc
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      - db
+      - elasticsearch
+    networks:
+      - webnet
+
+  php-cron:
+    build:
+      context: .
+      dockerfile: docker/php-cron/Dockerfile
+    restart: always
+    profiles:
+      - php-cron
+    working_dir: /var/www/html
+    environment:
+      SERVER_NAME: ${SERVER_NAME}
+      OTP_WM_CHANNEL_PORT: ${OTP_WM_CHANNEL_PORT}
+      OTP_WM_WEBSOCKET_PORT: ${OTP_WM_WEBSOCKET_PORT}
+      OTP_WM_HTTP_PORT: ${OTP_WM_HTTP_PORT}
+    volumes:
+      - ./app:/var/www/html
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      - db
+    networks:
+      - webnet
+
+  php-workerman:
+    build:
+      context: .
+      dockerfile: docker/php-workerman/Dockerfile
+      args:
+        APP_UID: ${APP_UID}
+        APP_GID: ${APP_GID}
+        APP_USER: ${APP_USER}
+    restart: always
+    profiles:
+      - php-workerman
+    user: "${APP_UID}:${APP_GID}"
+    working_dir: /var/www/html
+    command: php wp-content/plugins/medvise-otp-login/websockets.php start
+    environment:
+      SERVER_NAME: ${SERVER_NAME}
+      OTP_WM_CHANNEL_PORT: ${OTP_WM_CHANNEL_PORT}
+      OTP_WM_WEBSOCKET_PORT: ${OTP_WM_WEBSOCKET_PORT}
+      OTP_WM_HTTP_PORT: ${OTP_WM_HTTP_PORT}
+    volumes:
+      - ./app:/var/www/html
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    expose:
+      - "2402"
+      - "2403"
+    depends_on:
+      - db
+    stop_signal: SIGINT
+    stop_grace_period: 30s
+    networks:
+      - webnet
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      PMA_SSL: 0
+    expose:
+      - "80"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      - db
+    networks:
+      - webnet
+
+  db:
+    build:
+      context: .
+      dockerfile: docker/mariadb/Dockerfile
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./docker/mariadb/custom.cnf:/etc/mysql/my.cnf
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - "${MYSQL_HOST_PORT}:3306"
+    expose:
+      - "3306"
+    networks:
+      - webnet
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    restart: always
+    volumes:
+      - ./docker/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./docker/elasticsearch/jvm.options:/usr/share/elasticsearch/config/jvm.options
+      - elastic_data:/usr/share/elasticsearch/data
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    expose:
+      - "9200"
+    networks:
+      - webnet
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
+  python:
+    build:
+      context: .
+      dockerfile: docker/python/Dockerfile
+      args:
+        APP_UID: ${APP_UID}
+        APP_GID: ${APP_GID}
+        APP_USER: ${APP_USER}
+    restart: always
+    user: "${APP_UID}:${APP_GID}"
+    expose:
+      - "5000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    networks:
+      - webnet
+
+  clinical-parser:
+    build:
+      context: ./parser
+      dockerfile: Dockerfile
+      args:
+        APP_UID: ${APP_UID}
+        APP_GID: ${APP_GID}
+        APP_USER: ${APP_USER}
+    profiles:
+      - clinical-parser
+    working_dir: /app
+    environment:
+      CLINREC_DB_TYPE: mysql
+      CLINREC_DB_HOST: db
+      CLINREC_DB_PORT: 3306
+      CLINREC_DB_USER: ${MYSQL_USER}
+      CLINREC_DB_PASSWORD: ${MYSQL_PASSWORD}
+      CLINREC_DB_NAME: ${MYSQL_DATABASE}
+      CLINREC_REQUEST_TIMEOUT: ${CLINREC_REQUEST_TIMEOUT}
+      CLINREC_MAX_RETRIES: ${CLINREC_MAX_RETRIES}
+      CLINREC_DELAY_BETWEEN_REQUESTS: ${CLINREC_DELAY_BETWEEN_REQUESTS}
+      CLINREC_WP_SYNC_ENABLED: ${CLINREC_WP_SYNC_ENABLED}
+      CLINREC_WP_BASE_URL: ${CLINREC_WP_BASE_URL}
+      CLINREC_WP_USERNAME: ${CLINREC_WP_USERNAME}
+      CLINREC_WP_PASSWORD: ${CLINREC_WP_PASSWORD}
+      CLINREC_WP_AUTHOR_ID: ${CLINREC_WP_AUTHOR_ID}
+      CLINREC_WP_VERIFY_SSL: ${CLINREC_WP_VERIFY_SSL}
+      CLINREC_WP_ARTICLE_TYPE_SLUG: ${CLINREC_WP_ARTICLE_TYPE_SLUG}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./parser:/app
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      - db
+      - nginx
+    networks:
+      - webnet
+
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: always
+    profiles:
+      - mailpit
+    environment:
+      MP_UI_AUTH: ${MAILPIT_AUTH:-admin:5quVZWCPdRk0mLTyf6Vm}
+    ports:
+      - "${MAILPIT_UI_PORT}:8025"
+      - "${MAILPIT_SMTP_PORT}:1025"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    networks:
+      - webnet
+
+  certbot:
+    image: certbot/certbot
+    profiles:
+      - certbot
+    volumes:
+      - ./docker/nginx/letsencrypt:/etc/letsencrypt
+      - ./docker/nginx/www:/var/www/certbot
+
+volumes:
+  mariadb_data:
+  elastic_data:
+
+networks:
+  webnet:
+    driver: bridge

@@ -1,0 +1,21 @@
+location = /parser-lk {
+    return 301 /parser-lk/;
+}
+
+location /parser-lk/ {
+    resolver 127.0.0.11 valid=30s ipv6=off;
+    set $parser_lk_upstream parser-lk:5000;
+
+    rewrite ^/parser-lk/?(.*)$ /$1 break;
+    proxy_pass http://$parser_lk_upstream;
+    proxy_http_version 1.1;
+    proxy_read_timeout 300s;
+    proxy_send_timeout 300s;
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Script-Name /parser-lk;
+    proxy_redirect off;
+}

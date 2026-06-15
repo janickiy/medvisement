@@ -1,0 +1,8 @@
+<wpml-config>
+    <admin-texts>
+        <key name="subscription_discounts_table_title"/>
+        <key name="subscription_discounts_head_quantity_text"/>
+        <key name="subscription_discounts_head_price_text"/>
+        <key name="subscription_discounts_head_discount_text"/>
+    </admin-texts>
+</wpml-config>

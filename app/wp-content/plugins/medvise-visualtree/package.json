@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jquery-contextmenu": "^2.9.2",
+    "jquery.fancytree": "^2.38.3",
+    "select2": "^4.1.0-rc.0"
+  }
+}

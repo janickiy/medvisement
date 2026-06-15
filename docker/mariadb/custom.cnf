@@ -1,0 +1,23 @@
+[mysqld]
+
+max-connections = 80
+thread-cache-size = 25
+
+table-open-cache = 1024
+table-definition-cache = 512
+
+tmp-table-size = 64M
+max-heap-table-size = 64M
+
+open-files-limit = 65535
+
+innodb-flush-method = O_DIRECT
+innodb-file-per-table = 1
+
+innodb-buffer-pool-size = 768M
+innodb-buffer-pool-instances = 1
+
+innodb-log-files-in-group = 2
+innodb-log-file-size = 256M
+
+innodb-flush-log-at-trx-commit = 1

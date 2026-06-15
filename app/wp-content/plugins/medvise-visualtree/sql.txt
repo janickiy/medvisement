@@ -1,0 +1,72 @@
+CREATE TABLE `wp_vt_disease_entity` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `parent` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `post_id` bigint(20) UNSIGNED DEFAULT 0,
+  `position` int(10) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE `wp_vt_disease_entity`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `wp_vt_disease_entity`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+CREATE TABLE `wp_vt_disease_closure` (
+  `ancestor` int(10) UNSIGNED NOT NULL,
+  `descendant` int(10) UNSIGNED NOT NULL,
+  `distance` tinyint(3) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE `wp_vt_disease_closure`
+  ADD PRIMARY KEY (`ancestor`,`descendant`);
+
+----
+
+CREATE TABLE `wp_vt_substance_entity` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `parent` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `post_id` bigint(20) UNSIGNED DEFAULT 0,
+  `position` int(10) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE `wp_vt_substance_entity`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `wp_vt_substance_entity`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+CREATE TABLE `wp_vt_substance_closure` (
+  `ancestor` int(10) UNSIGNED NOT NULL,
+  `descendant` int(10) UNSIGNED NOT NULL,
+  `distance` tinyint(3) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE `wp_vt_substance_closure`
+  ADD PRIMARY KEY (`ancestor`,`descendant`);
+
+----
+
+CREATE TABLE `wp_vt_custom_quiz_entity` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `parent` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `post_id` bigint(20) UNSIGNED DEFAULT 0,
+  `position` int(10) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE `wp_vt_custom_quiz_entity`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `wp_vt_custom_quiz_entity`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+CREATE TABLE `wp_vt_custom_quiz_closure` (
+  `ancestor` int(10) UNSIGNED NOT NULL,
+  `descendant` int(10) UNSIGNED NOT NULL,
+  `distance` tinyint(3) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE `wp_vt_custom_quiz_closure`
+  ADD PRIMARY KEY (`ancestor`,`descendant`);

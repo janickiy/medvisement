@@ -1,0 +1,14 @@
+location /ep-autosuggest {
+  # only allow POST requests
+  limit_except POST {
+    deny all;
+  }
+
+  # Perform our request
+  rewrite ^/ep-autosuggest(.*) $1/${ES_INDEX}/_search break;
+  proxy_set_header Host $host;
+
+  # Use the URL of the server here
+  proxy_pass http://elasticsearch:9200;
+  return 403;
+}

@@ -1,0 +1,45 @@
+.cf-association__option {
+    height: auto !important;
+}
+
+.cf-association__option-title-inner {
+    position: static !important;
+    white-space: unset !important;
+    word-break: break-word;
+}
+
+.cf-association__cols {
+    flex-direction: column !important;
+}
+
+.cf-association__col {
+    width: 100% !important;
+    min-height: 160px;
+}
+
+.cf-association__cols:before {
+    top: 50% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 1px !important;
+}
+
+.edit-post-post-tree-position {
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.edit-post-post-tree-position div {
+    display: block;
+    padding: 6px 12px 6px 0;
+}
+
+.edit-post-post-tree-position span {
+    color: rgb(117, 117, 117);
+}
+
+tr.user-url-wrap {
+    display: none;
+}

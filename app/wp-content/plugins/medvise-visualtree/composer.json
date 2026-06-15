@@ -1,0 +1,29 @@
+{
+    "name": "medvisement/medvise-visualtree",
+    "autoload": {
+        "psr-4": {
+            "Medvisement\\Models\\": "Models/",
+            "Medvisement\\Classes\\": "Classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roman Berdnikov",
+            "email": "romaberdnikov@gmail.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "8.3.1"
+        }
+    },
+    "require": {
+        "illuminate/database": "8.x-dev",
+        "illuminate/events": "8.x-dev",
+        "illuminate/container": "8.x-dev",
+        "illuminate/contracts": "8.x-dev",
+        "illuminate/pagination": "8.x-dev",
+        "illuminate/support": "8.x-dev",
+        "jiaxincui/closure-table": "^2.1"
+    }
+}

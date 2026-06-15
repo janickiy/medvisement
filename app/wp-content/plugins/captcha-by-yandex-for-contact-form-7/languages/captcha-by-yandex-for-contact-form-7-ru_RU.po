@@ -1,0 +1,199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Form 7 Yandex Captcha\n"
+"POT-Creation-Date: 2024-03-21 18:24+0300\n"
+"PO-Revision-Date: 2024-03-21 18:24+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bootstrap.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bootstrap.php:36
+#, php-format
+msgid ""
+"Your server is running PHP version %1$s but this plugin requires at least "
+"PHP %2$s. Please run an upgrade."
+msgstr ""
+"Ваш сервер работает на PHP версии %1$s, но плагину требуется минимум PHP "
+"версии %2$s. Пожалуйста обновите PHP до минимально необходимой версии."
+
+#: bootstrap.php:44
+#, php-format
+msgid ""
+"Your Wordpress running version is %1$s but this plugin requires at least "
+"version %2$s. Please run an upgrade."
+msgstr ""
+"Версия вашего Wordpress %1$s, но плагину требуется минимально версия %2$s. "
+"Пожалуйста обновите Wordpress до минимально необходимой версии."
+
+#: bootstrap.php:51
+msgid "Please install and activate Contact Form 7 plugin first"
+msgstr "Сперва необходимо установить и активировать плагин Contact Form 7"
+
+#: controller/class-cfyc-common.php:140 controller/class-cfyc-common.php:141
+msgid "Configure"
+msgstr "Настроить"
+
+#: controller/class-cfyc-form-tag.php:31
+#, php-format
+msgid ""
+"Please configure the plugin first. Go to <a href=\"%s\">configuration</a>"
+msgstr ""
+"Для использования капчи необходимо сперва Настроить плагин. Перейти к <a "
+"href=\"%s\">настройке</a>"
+
+#: controller/class-cfyc-form-tag.php:62
+msgid "Name"
+msgstr "Имя"
+
+#: controller/class-cfyc-form-tag.php:68 controller/class-cfyc-form-tag.php:73
+msgid "Test mode"
+msgstr "Режим тестирования"
+
+#: controller/class-cfyc-form-tag.php:77
+msgid "Enable test mode"
+msgstr "Включить режим тестирования"
+
+#: controller/class-cfyc-form-tag.php:84 controller/class-cfyc-form-tag.php:89
+msgid "Invisible captcha"
+msgstr "Невидимая капча"
+
+#: controller/class-cfyc-form-tag.php:93
+msgid "Use invisible captcha"
+msgstr "Использовать невидимую капчу"
+
+#: controller/class-cfyc-form-tag.php:102
+msgid "Data processing block"
+msgstr "Блок Обработка Данных"
+
+#: controller/class-cfyc-form-tag.php:108
+msgid "Hide data processing block"
+msgstr "Скрыть блок Обработка Данных"
+
+#: controller/class-cfyc-form-tag.php:111
+msgid ""
+"It is your responsibility to notify users that their data is being processed "
+"by SmartCaptcha. If you hide the notification block, let users know in some "
+"other way that SmartCaptcha is processing their data."
+msgstr ""
+"Вы обязаны уведомлять пользователей о том, что их данные обрабатывает "
+"SmartCaptcha. Если вы скрываете блок с уведомлением, сообщите пользователям "
+"иным способом о том, что SmartCaptcha обрабатывает их данные."
+
+#: controller/class-cfyc-form-tag.php:117
+msgid "Position of Data processing block:"
+msgstr "Положение блока Обработка Данных"
+
+#: controller/class-cfyc-form-tag.php:137
+#: controller/class-cfyc-form-tag.php:165
+msgid "Insert Tag"
+msgstr "Добавить"
+
+#: controller/class-cfyc-frontend.php:143
+msgid "Please check captcha"
+msgstr "Необходимо решить капчу"
+
+#: controller/class-cfyc-service.php:29
+msgid "Yandex Captcha"
+msgstr "Яндекс капча"
+
+#: controller/class-cfyc-service.php:173
+msgid "Error"
+msgstr "Ошибка"
+
+#: controller/class-cfyc-service.php:174
+msgid "Invalid keys"
+msgstr "Некорректные ключи"
+
+#: controller/class-cfyc-service.php:179
+msgid "Settings saved."
+msgstr "Настройки сохранены"
+
+#: controller/class-cfyc-service.php:186
+msgid ""
+"Yandex Captcha protects you against spam and other types of automated abuse. "
+"With Contact Form 7&#8217;s Yandex Captcha integration module, you can block "
+"abusive form submissions by spam bots."
+msgstr ""
+"Яндекс капча защищает вас от спама и других способов автоматического "
+"злоупотребления. В интеграции с Contact Form 7, модуль Яндекс капча "
+"позволяет блокировать спам и злоупотребления."
+
+#: controller/class-cfyc-service.php:192
+msgid "Yandex Captcha is active on this site."
+msgstr "Яндекс капча активирована на этом сайте."
+
+#: controller/class-cfyc-service.php:202
+msgid "Setup Integration"
+msgstr "Настроить интеграцию"
+
+#: controller/class-cfyc-service.php:217
+msgid "Client key"
+msgstr "Ключ клиента"
+
+#: controller/class-cfyc-service.php:234
+msgid "Server Key"
+msgstr "Ключ сервера"
+
+#: controller/class-cfyc-service.php:258
+msgctxt "API keys"
+msgid "Remove Keys"
+msgstr "Удалить ключи"
+
+#: controller/class-cfyc-service.php:263
+msgid "Save Changes"
+msgstr "Сохранить настройки"
+
+#: views/requirements-error.php:7
+msgid "Yandex Captcha for Contact Form 7"
+msgstr "Яндекс капча for Contact Form 7"
+
+#: views/requirements-error.php:7
+msgid ""
+"error: Your environment does not meet all of the system requirements listed "
+"below."
+msgstr ""
+"ошибка: Ваше окружение не удовлетворяет всем системным требованиям указанным "
+"ниже."
+
+#: views/requirements-error.php:17
+msgid ""
+"If you need to upgrade your version of PHP you can ask your hosting company "
+"for assistance, and if you need help upgrading WordPress you can refer to the"
+msgstr ""
+"Если вам нужно обновить вашу версию PHP, вы можете запросить это у вашего "
+"хостинг-провайдер, и если вам нужно обновить WordPress посмотрите в"
+
+#. Plugin Name of the plugin/theme
+msgid "Captcha by Yandex for Contact Form 7"
+msgstr "Капча от Яндекс для Contact Form 7"
+
+#. Description of the plugin/theme
+msgid "Allow use Yandex captcha for your forms with Contact Form 7"
+msgstr ""
+"Позволяет использовать Яндекс капчу для ваших форм в плагине Contact Form 7"
+
+#. Author of the plugin/theme
+msgid "stasionok"
+msgstr "stasionok"
+
+#. Author URI of the plugin/theme
+msgid "https://t.me/stasionok"
+msgstr "https://t.me/stasionok"
+
+#~ msgid "Contact Form 7 Yandex Captcha"
+#~ msgstr "Яндекс капча for Contact Form 7"

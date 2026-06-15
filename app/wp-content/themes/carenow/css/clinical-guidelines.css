@@ -1,0 +1,425 @@
+.clinical-guidelines-page {
+    --cr-bg: linear-gradient(180deg, #eef3ff 0%, #f8fbff 55%, #ffffff 100%);
+    --cr-panel-bg: rgba(255, 255, 255, 0.92);
+    --cr-border: rgba(105, 132, 185, 0.14);
+    --cr-border-strong: rgba(74, 110, 174, 0.22);
+    --cr-text: #1d2d4f;
+    --cr-muted: #7283a7;
+    --cr-primary: #4f77b6;
+    --cr-primary-dark: #365c95;
+    --cr-pill-blue: #e7f2ff;
+    --cr-pill-green: #e8f8eb;
+    --cr-pill-red: #fdecec;
+    --cr-pill-sand: #f5f1e6;
+    color: var(--cr-text);
+}
+
+.clinical-guidelines-hero {
+    background: var(--cr-bg);
+    padding: 56px 0 44px;
+    border-bottom: 1px solid rgba(105, 132, 185, 0.08);
+}
+
+.clinical-guidelines-hero__inner {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clinical-guidelines-hero__title {
+    margin-bottom: 12px;
+    color: #152443;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.clinical-guidelines-hero__subtitle {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    color: var(--cr-muted);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.clinical-guidelines-search {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 14px;
+    border: 1px solid var(--cr-border);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 20px 45px rgba(73, 101, 151, 0.08);
+}
+
+.clinical-guidelines-search__row {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) 140px;
+    align-items: center;
+    gap: 10px;
+}
+
+.clinical-guidelines-search__specialty,
+.clinical-guidelines-search__input-wrap {
+    position: relative;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(105, 132, 185, 0.12);
+    border-radius: 18px;
+    background: #fff;
+}
+
+.clinical-guidelines-search__specialty {
+    padding: 0 18px;
+    gap: 10px;
+}
+
+.clinical-guidelines-search__label {
+    flex-shrink: 0;
+    color: var(--cr-muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.clinical-guidelines-search__select {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: var(--cr-text);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.clinical-guidelines-search__select:focus,
+.clinical-guidelines-search__input:focus {
+    outline: 0;
+}
+
+.clinical-guidelines-search__input-wrap {
+    padding-left: 48px;
+    overflow: visible;
+}
+
+.clinical-guidelines-search__icon {
+    position: absolute;
+    left: 18px;
+    color: var(--cr-primary);
+    font-size: 18px;
+}
+
+.clinical-guidelines-search__input {
+    width: 100%;
+    padding: 0 18px 0 0;
+    border: 0;
+    background: transparent;
+    color: var(--cr-text);
+    font-size: 16px;
+}
+
+.clinical-guidelines-search__submit {
+    min-height: 62px;
+    border: 0;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #5e84bf 0%, #456ea9 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    box-shadow: 0 14px 26px rgba(69, 110, 169, 0.24);
+}
+
+.clinical-guidelines-search__submit:hover,
+.clinical-guidelines-search__submit:focus {
+    background: linear-gradient(180deg, #5a81bc 0%, #365c95 100%);
+    transform: translateY(-1px);
+}
+
+.clinical-guidelines-content {
+    padding: 38px 0 64px;
+    background:
+        radial-gradient(circle at top left, rgba(225, 235, 255, 0.65) 0, transparent 22%),
+        linear-gradient(180deg, #f6f9ff 0%, #ffffff 28%);
+}
+
+.clinical-guidelines-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.clinical-guidelines-sidebar__panel,
+.clinical-guidelines-results__header,
+.clinical-guidelines-card,
+.clinical-guidelines-empty {
+    border: 1px solid var(--cr-border);
+    border-radius: 24px;
+    background: var(--cr-panel-bg);
+    box-shadow: 0 18px 45px rgba(73, 101, 151, 0.08);
+}
+
+.clinical-guidelines-sidebar__panel {
+    padding: 24px 18px;
+    position: sticky;
+    top: 24px;
+}
+
+.clinical-guidelines-sidebar__title,
+.clinical-guidelines-results__title,
+.clinical-guidelines-empty h3 {
+    margin: 0;
+    color: #172746;
+    font-weight: 700;
+}
+
+.clinical-guidelines-sidebar__title {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.clinical-guidelines-sidebar__nav {
+    display: grid;
+    gap: 8px;
+}
+
+.clinical-guidelines-sidebar__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    color: var(--cr-text);
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease, color .2s ease;
+}
+
+.clinical-guidelines-sidebar__link:hover,
+.clinical-guidelines-sidebar__link:focus {
+    background: rgba(79, 119, 182, 0.08);
+    color: #18305e;
+    transform: translateX(2px);
+}
+
+.clinical-guidelines-sidebar__link strong {
+    min-width: 38px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(79, 119, 182, 0.1);
+    color: var(--cr-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.clinical-guidelines-sidebar__link.is-active {
+    background: rgba(79, 119, 182, 0.1);
+    color: #18305e;
+    box-shadow: inset 3px 0 0 var(--cr-primary);
+}
+
+.clinical-guidelines-results__header {
+    margin-bottom: 18px;
+    padding: 26px 28px;
+}
+
+.clinical-guidelines-results__title {
+    font-size: 36px;
+    line-height: 1.1;
+}
+
+.clinical-guidelines-results__subtitle,
+.clinical-guidelines-empty p {
+    margin: 10px 0 0;
+    color: var(--cr-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.clinical-guidelines-results__list {
+    display: grid;
+    gap: 14px;
+}
+
+.clinical-guidelines-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 22px 24px;
+}
+
+.clinical-guidelines-card__main {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.clinical-guidelines-card__title {
+    margin: 0 0 14px;
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+.clinical-guidelines-card__title a {
+    color: #172746;
+    text-decoration: none;
+}
+
+.clinical-guidelines-card__title a:hover,
+.clinical-guidelines-card__title a:focus {
+    color: var(--cr-primary-dark);
+}
+
+.clinical-guidelines-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.clinical-guidelines-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.clinical-guidelines-badge.is-year {
+    background: var(--cr-pill-blue);
+    color: #3272c9;
+}
+
+.clinical-guidelines-badge.is-age {
+    background: var(--cr-pill-sand);
+    color: #8e6d2f;
+}
+
+.clinical-guidelines-badge.is-active {
+    background: var(--cr-pill-green);
+    color: #2f9151;
+}
+
+.clinical-guidelines-badge.is-inactive {
+    background: var(--cr-pill-red);
+    color: #b65454;
+}
+
+.clinical-guidelines-badge.is-neutral {
+    background: rgba(79, 119, 182, 0.1);
+    color: var(--cr-primary);
+}
+
+.clinical-guidelines-card__file {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 74px;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 1px solid var(--cr-border-strong);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--cr-primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.clinical-guidelines-card__file:hover,
+.clinical-guidelines-card__file:focus {
+    border-color: rgba(54, 92, 149, 0.38);
+    color: #1e3f70;
+}
+
+.clinical-guidelines-empty {
+    padding: 28px;
+}
+
+.clinical-guidelines-results .page-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clinical-guidelines-results .page-numbers a,
+.clinical-guidelines-results .page-numbers span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--cr-border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--cr-text);
+    text-decoration: none;
+}
+
+.clinical-guidelines-results .page-numbers .current {
+    border-color: rgba(54, 92, 149, 0.3);
+    background: rgba(79, 119, 182, 0.1);
+    color: var(--cr-primary-dark);
+}
+
+@media (max-width: 991px) {
+    .clinical-guidelines-hero__title {
+        font-size: 38px;
+    }
+
+    .clinical-guidelines-search__row,
+    .clinical-guidelines-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .clinical-guidelines-sidebar__panel {
+        position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    .clinical-guidelines-hero {
+        padding-top: 34px;
+    }
+
+    .clinical-guidelines-hero__title {
+        font-size: 31px;
+    }
+
+    .clinical-guidelines-search {
+        padding: 12px;
+        border-radius: 20px;
+    }
+
+    .clinical-guidelines-search__specialty,
+    .clinical-guidelines-search__input-wrap,
+    .clinical-guidelines-search__submit {
+        min-height: 56px;
+    }
+
+    .clinical-guidelines-results__header {
+        padding: 22px 20px;
+    }
+
+    .clinical-guidelines-results__title {
+        font-size: 29px;
+    }
+
+    .clinical-guidelines-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .clinical-guidelines-card__title {
+        font-size: 20px;
+    }
+}

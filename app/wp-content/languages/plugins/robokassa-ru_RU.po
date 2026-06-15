@@ -1,0 +1,24 @@
+# Translation of Plugins - Robokassa payment gateway for Woocommerce - Development (trunk) in Russian
+# This file is distributed under the same license as the Plugins - Robokassa payment gateway for Woocommerce - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-01-26 16:25:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Robokassa payment gateway for Woocommerce - Development (trunk)\n"
+
+#: main_settings_credit.php:84 main_settings_rb.php:478 sms_settings_rb.php:93
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#. Plugin URI of the plugin
+msgid "/wp-admin/admin.php?page=main_settings_rb.php"
+msgstr "/wp-admin/admin.php?page=main_settings_rb.php"
+
+#. Description of the plugin
+msgid "Данный плагин добавляет на Ваш сайт метод оплаты Робокасса для WooCommerce"
+msgstr "Данный плагин добавляет на ваш сайт метод оплаты Робокасса для WooCommerce"

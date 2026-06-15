@@ -1,0 +1,1 @@
+Документация по настройке модуля доступна по ссылке https://wiki.intellectmoney.ru/pages/viewpage.action?pageId=2098184

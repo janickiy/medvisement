@@ -1,0 +1,41 @@
+services:
+  parser:
+    build: .
+    container_name: medvisement_parser_lk
+    environment:
+      - ANTICAPTCHA_API_KEY=${ANTICAPTCHA_API_KEY}
+      - DELAY_BETWEEN_PAGES=${DELAY_BETWEEN_PAGES:-1}
+      - DELAY_BETWEEN_PDF=${DELAY_BETWEEN_PDF:-1}
+      - MAX_ITEMS=${MAX_ITEMS:-0}
+      - SKIP_DOCUMENTS=${SKIP_DOCUMENTS:-false}
+      - HTTP_TIMEOUT=${HTTP_TIMEOUT:-60}
+      - ANTICAPTCHA_REQUEST_TIMEOUT=${ANTICAPTCHA_REQUEST_TIMEOUT:-30}
+      - CAPTCHA_IMAGES_DIR=captcha_images
+      - PDF_DIR=pdf_files
+      - WP_SYNC_ENABLED=${WP_SYNC_ENABLED:-true}
+      - WP_BASE_URL=${WP_BASE_URL:-https://nginx}
+      - WP_USERNAME=${WP_USERNAME:-admin}
+      - WP_PASSWORD=${WP_PASSWORD:-}
+      - WP_VERIFY_SSL=${WP_VERIFY_SSL:-false}
+      - WP_AUTHOR_ID=${WP_AUTHOR_ID:-1}
+      - WP_POST_TYPE=${WP_POST_TYPE:-substance}
+      - WP_ARTICLE_TYPE_SLUG=${WP_ARTICLE_TYPE_SLUG:-ohlp}
+      - WP_ARTICLE_TYPE_NAME=${WP_ARTICLE_TYPE_NAME:-ОХЛП}
+      - WP_POST_STATUS=${WP_POST_STATUS:-draft}
+      - WP_TIMEOUT=${WP_TIMEOUT:-120}
+      - PDF_TEXT_MAX_CHARS=${PDF_TEXT_MAX_CHARS:-0}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./.env:/app/.env
+      - ./data/captcha_images:/app/captcha_images
+      - ./data/pdf_files:/app/pdf_files
+    networks:
+      medvisement:
+        aliases:
+          - parser-lk
+    restart: "no"
+
+networks:
+  medvisement:
+    external: true
+    name: ${WORDPRESS_DOCKER_NETWORK:-medvisement1_webnet}

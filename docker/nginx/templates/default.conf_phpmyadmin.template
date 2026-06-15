@@ -1,0 +1,11 @@
+location ^~ /phpmyadmin/ {
+    # Resolve the upstream at request time so nginx can start
+    # even when phpmyadmin is not running locally.
+    resolver 127.0.0.11 valid=30s ipv6=off;
+    set $phpmyadmin_upstream phpmyadmin:80;
+    proxy_pass http://$phpmyadmin_upstream/;
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}

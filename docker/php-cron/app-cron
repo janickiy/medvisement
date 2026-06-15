@@ -1,0 +1,3 @@
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+* * * * * root su -s /bin/sh medvisement -c "/usr/local/bin/wp cron event run --due-now --path=/var/www/html" >> /proc/1/fd/1 2>&1

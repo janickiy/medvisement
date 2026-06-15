@@ -1,0 +1,10 @@
+{
+    "require": {
+        "irazasyed/telegram-bot-sdk": "^3.13",
+        "endroid/qr-code": "^5.0",
+        "khanamiryan/qrcode-detector-decoder": "^2.0",
+        "workerman/workerman": "^4.1",
+        "workerman/channel": "^1.2",
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}

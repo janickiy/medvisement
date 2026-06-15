@@ -1,0 +1,492 @@
+# Translation of YITH Licensing in Russian
+# This file is distributed under the same license as the YITH Licensing package.
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH Licensing\n"
+"Report-Msgid-Bugs-To: YITH <plugins@yithemes.com>\n"
+"POT-Creation-Date: 2023-06-05 15:37:20+00:00\n"
+"PO-Revision-Date: 2021-12-22 16:43:38+0000\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % "
+"10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+
+#: includes/admin/panel.php:82
+msgid "License Activation"
+msgstr "Активация лицензии"
+
+#: includes/admin/panel.php:177 includes/admin/panel.php:201
+msgid "Required param missing"
+msgstr ""
+
+#: includes/admin/panel.php:183 includes/admin/panel.php:207
+msgid "Requested product is not available"
+msgstr ""
+
+#. translators: You can find the License e-mail and the License key in your
+#. License & Download page.
+#: includes/admin/panel.php:365
+msgid "You can find the License e-mail and the License key in your"
+msgstr "Вы можете найти адрес электронной почты и лицензионный ключ на"
+
+#: includes/admin/panel.php:389 includes/licenses/yith.php:400
+msgid "Great"
+msgstr "Отлично"
+
+#: includes/admin/panel.php:389 includes/licenses/yith.php:400
+msgid "License successfully activated"
+msgstr "Лицензия успешно активирована"
+
+#: includes/admin/panel.php:390
+msgid "Are you sure you want to deactivate the license for current site?"
+msgstr "Вы уверены, что хотите деактивировать лицензию для текущего сайта?"
+
+#. translators: Modal title. Shown on activation license page to help the
+#. customer to find the license information.
+#: includes/admin/panel.php:393
+msgid "Where to find the e-mail and license ?"
+msgstr "Где найти электронную почту и лицензию?"
+
+#: includes/admin/panel.php:445
+msgid "Thank you for choosing YITH to improve your shop!"
+msgstr "Спасибо, что выбрали YITH для улучшения своего магазина!"
+
+#: includes/legacy/upgrade.php:101 includes/upgrade.php:634
+msgid "Invalid URL Provided."
+msgstr "Указан неверный URL-адрес."
+
+#: includes/legacy/upgrade.php:113 includes/upgrade.php:648
+msgid "Could not create Temporary file."
+msgstr "Не удалось создать временный файл."
+
+#: includes/licenses/yith.php:391
+msgid "Invalid Request"
+msgstr "Неверный запрос"
+
+#: includes/licenses/yith.php:392
+msgid ""
+"Matching license key not found. Be sure to use the email used for the order "
+"in YITH and the correct license serial number."
+msgstr ""
+"Не найден подходящий лицензионный ключ. Обязательно используйте электронную "
+"почту, использованную для заказа в YITH, и правильный серийный номер "
+"лицензии."
+
+#: includes/licenses/yith.php:393
+msgid "Software has been deactivated"
+msgstr "Программное обеспечение было деактивировано"
+
+#: includes/licenses/yith.php:394
+msgid "Maximum number of license activations reached"
+msgstr "Достигнуто максимальное количество активаций лицензии"
+
+#: includes/licenses/yith.php:395
+msgid "Invalid instance ID"
+msgstr "Неверный идентификатор экземпляра"
+
+#: includes/licenses/yith.php:396
+msgid "Invalid security key"
+msgstr "Неверный ключ безопасности"
+
+#: includes/licenses/yith.php:397
+msgid "License key has expired"
+msgstr "Срок действия лицензионного ключа истек"
+
+#: includes/licenses/yith.php:398
+msgid "License key has been revoked"
+msgstr "Лицензионный ключ аннулирован"
+
+#: includes/licenses/yith.php:399
+msgid "This product is not included in your YITH Club Subscription Plan"
+msgstr "Этот товар не включен в ваш план подписки YITH Club"
+
+#: includes/licenses/yith.php:401
+msgid "License key deactivated for website"
+msgstr "Лицензионный ключ деактивирован для сайта"
+
+#: includes/licenses/yith.php:417
+msgid "Error"
+msgstr "Ошибка"
+
+#: includes/onboarding.php:67 includes/onboarding.php:68
+#: templates/panel/activation/activation-panel.php:19
+#: templates/panel/activation/onboarding-activation.php:27
+msgid "YITH License Activation"
+msgstr "Активация лицензии YITH"
+
+#: includes/onboarding.php:228
+msgid ""
+"Unable to contact remote server: this occurs when there are issues with "
+"connecting to our own servers. Trying again after a few minutes should solve "
+"the issue. If the problem persists please submit a support ticket and we "
+"will be happy to help you."
+msgstr ""
+"Невозможно связаться с удаленным сервером: это происходит, когда есть "
+"проблемы с подключением к нашим серверам. Повторная попытка через несколько "
+"минут должна решить проблему. Если проблема не исчезнет, ​​отправьте заявку в "
+"службу поддержки, и мы будем рады вам помочь."
+
+#: includes/onboarding.php:229
+msgid "email address"
+msgstr "адрес электронной почты"
+
+#: includes/onboarding.php:230
+msgid "license key"
+msgstr "лицензионный ключ"
+
+#: includes/upgrade.php:130
+msgid "An unexpected error occurred, please try again later. Thanks!"
+msgstr "Произошла непредвиденная ошибка. Повторите попытку позже. Спасибо!"
+
+#: includes/upgrade.php:174
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yith-changelog-button open-plugin-details-modal\" title=\"%3$s\">View "
+"version %4$s details</a>"
+msgstr ""
+
+#. translators: %1$s, %3$s are placeholders for the plugin name, %2$s the link
+#. to open changelog modal, %4$s is the new plugin version.
+#: includes/upgrade.php:189
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button open-plugin-details-modal\" title=\"%3$s\">View version "
+"%4$s details</a>. <em>Make sure the plugin license has been activated on "
+"each site of the network to benefits from automatic updates.</em>"
+msgstr ""
+"Доступна новая версия %1$s. <a href=\"%2$s\" class=\"thickbox yit-changelog-"
+"button open-plugin-details-modal\" title=\"%3$s\">Посмотреть информацию о "
+"версии %4$s</a>. <em>Убедитесь, что лицензия на плагин активирована на "
+"каждом сайте сети, чтобы пользоваться автоматическими обновлениями.</em>"
+
+#. translators: %1$s, %3$s, %6$s are placeholders for the plugin name, %2$s the
+#. link to open changelog modal, %4$s is the new plugin version, %5$s is the
+#. link to activation page.
+#: includes/upgrade.php:198
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button open-plugin-details-modal\" title=\"%3$s\">View version "
+"%4$s details</a>. <em>Automatic update is unavailable for this plugin, "
+"please <a href=\"%5$s\" title=\"License activation\">activate</a> your copy "
+"of %1$s.</em>"
+msgstr ""
+"Доступна новая версия плагина %1$s. <a href=\"%2$s\" class=\"thickbox yit-"
+"changelog-button open-plugin-details-modal\" title=\"%3$s\">Посмотреть "
+"информацию о версии %4$s</a>. <em>Для этого плагина автоматическое "
+"обновление недоступно, пожалуйста <a href=\"%5$s\" title=\"License "
+"activation\">активируйте</a> вашу копию %1$s.</em>"
+
+#: includes/upgrade.php:207
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button open-plugin-details-modal\" title=\"%3$s\">View version "
+"%4$s details</a> or <a href=\"%5$s\" class=\"%6$s\" data-plugin=\"%7$s\" "
+"data-slug=\"%8$s\" data-name=\"%1$s\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a href=\"%2$s\" class=\"thickbox yit-changelog-"
+"button open-plugin-details-modal\" title=\"%3$s\">Посмотреть информацию о "
+"версии %4$s</a> или <a href=\"%5$s\" class=\"%6$s\" data-plugin=\"%7$s\" "
+"data-slug=\"%8$s\" data-name=\"%1$s\">обновить сейчас</a>."
+
+#: includes/upgrade.php:222
+msgid ""
+"<br/><b>Please note:</b> You are using a higher version than the latest "
+"available one. </em>Please, make sure you've downloaded the latest version "
+"of <em>%1$s</em> from the only <a href=\"https://yithemes.com\" "
+"target=\"_blank\">YITH official website</a>, specifically, from your <a "
+"href=\"https://yithemes.com/my-account/recent-downloads/\" "
+"target=\"_blank\">Downloads page</a>. This is the only way to be sure the "
+"version you are using is 100%% malware-free."
+msgstr ""
+"<br/><b>Пожалуйста, обратите внимание:</b> Вы используете более позднюю "
+"версию, чем последняя доступная. </em>Пожалуйста, убедитесь, что вы скачали "
+"последнюю версию <em>%1$s</em> с единственного <a href=\"https://yithemes."
+"com\" target=\"_blank\">официального сайта YITH</a>, в частности, на вашей "
+"<a href=\"https://yithemes.com/my-account/recent-downloads/\" "
+"target=\"_blank\">странице Загрузок</a>. Это единственный способ убедиться, "
+"что используемая вами версия не содержит вирусов."
+
+#: includes/upgrade.php:477
+msgid "YITH Repository"
+msgstr "Репозиторий YITH"
+
+#: templates/panel/activation/activation-panel.php:84
+msgid ""
+"If you've already renewed a license and the expiry date is not updated, "
+"click to update."
+msgstr ""
+"Если вы уже продлили лицензию, а срок ее действия не обновлен, нажмите, "
+"чтобы обновить."
+
+#. translators: %1$1s: Number of activations for the licence. %2$2s: The
+#. activations number limit
+#: templates/panel/activation/activation-row.php:35
+msgid "%1$1s out of %2$2s"
+msgstr "%1$1s из %2$2s"
+
+#: templates/panel/activation/onboarding-activation.php:37
+msgid "Thank you for choosing to install"
+msgstr "Спасибо, что решили установить"
+
+#: templates/panel/activation/onboarding-activation.php:43
+msgid "Activate your license now to"
+msgstr "Активируйте свою лицензию сейчас, чтобы"
+
+#: templates/panel/activation/onboarding-activation.php:46
+msgid "Unblock <b>advanced features</b> available only with a valid license"
+msgstr ""
+"Разблокируйте <b>расширенные функции</b>, доступные только при наличии "
+"действующей лицензии"
+
+#: templates/panel/activation/onboarding-activation.php:49
+msgid ""
+"Get <b>automatic and regular updates</b> to remain compatible with the "
+"latest WordPress and WooCommerce versions, and to keep you shop safe"
+msgstr ""
+"Получите <b>автоматические и регулярные обновления</b> для обеспечения "
+"совместимости с последними версиями WordPress и WooCommerce, а также для "
+"обеспечения безопасности вашего магазина"
+
+#: templates/panel/activation/onboarding-activation.php:52
+msgid "Get <b>dedicated expert help</b> in our support desk"
+msgstr ""
+"Получите <b>специализированную помощь экспертов</b> в нашей службе поддержки"
+
+#: templates/panel/activation/onboarding-activation.php:72
+msgid "Activate license"
+msgstr "Активировать лицензию"
+
+#: templates/panel/activation/onboarding-activation.php:76
+msgid "Return to the dashboard and activate the license later"
+msgstr "Вернуться на приборную панель и активировать лицензию позже"
+
+#: templates/panel/activation/onboarding-activation.php:87
+msgid "All done!"
+msgstr "Все готово!"
+
+#: templates/panel/activation/onboarding-activation.php:88
+msgid "Thank you for activating the plugin license."
+msgstr "Спасибо за активацию лицензии плагина."
+
+#: templates/panel/activation/onboarding-activation.php:89
+msgid "Go to plugin dashboard"
+msgstr "Перейти в приборную панель плагина"
+
+#. Author of the plugin/theme
+msgid "YITHEMES"
+msgstr "YITHEMES"
+
+#. translators: My account section name. Use the same translation of the
+#. yithemes.com webiste.
+#: includes/admin/panel.php:367
+msgctxt "yithemes.com webiste section"
+msgid "Licenses and Downloads page >"
+msgstr "Страница лицензий и загрузок >"
+
+#. translators: Button label, use a short text please.
+#: includes/admin/panel.php:372
+msgctxt "Button text"
+msgid "Go to your Licenses page"
+msgstr "Перейдите на страницу с лицензиями"
+
+#. translators: %s stand for the field name.
+#: includes/admin/panel.php:386
+msgctxt "error message for activation panel"
+msgid ""
+"Please, insert a valid email address. Be sure you entered the e-mail used "
+"for your order in YITH"
+msgstr ""
+
+#: includes/admin/panel.php:387
+msgctxt "error message for activation panel"
+msgid "Please, insert a valid license key"
+msgstr ""
+
+#. translators: %s is a placeholder for the activation page panel link.
+#: includes/admin/panel.php:448
+msgctxt "%s is a placeholder for a link \"set your license key\""
+msgid ""
+"Please <a href=\"%s\">set your license key</a> to get premium features and "
+"support for:"
+msgstr ""
+
+#: includes/admin/panel.php:459
+msgctxt "Button label"
+msgid "set your licenses"
+msgstr "введите ваши лицензионные ключи"
+
+#: templates/panel/activation/activation-row.php:60
+msgctxt "Button label"
+msgid "Remove"
+msgstr "Удалить"
+
+#. translators: $s stand for the field name.
+#: includes/onboarding.php:227
+msgctxt "%s = field name"
+msgid "Please, insert a valid %s"
+msgstr "Пожалуйста, вставьте действительный %s"
+
+#. translators: %s: Plugin name and version
+#: includes/upgrade.php:103
+msgctxt "plugin-fw"
+msgid "Updating %s..."
+msgstr "Обновление %s..."
+
+#. translators: %s: Plugin name and version
+#: includes/upgrade.php:105
+msgctxt "plugin-fw"
+msgid "%s updated!"
+msgstr "Плагин %s обновлен!"
+
+#. translators: %s: Plugin name and version
+#: includes/upgrade.php:107
+msgctxt "plugin-fw"
+msgid "%s update failed"
+msgstr "Не удалось обновить %s"
+
+#: includes/upgrade.php:475
+msgctxt "[Update Plugin Message: License not enabled]"
+msgid "You have to activate the plugin to benefit from automatic updates."
+msgstr ""
+"Вы должны активировать плагин, чтобы получать автоматические обновления."
+
+#: templates/panel/activation/activation-panel.php:22
+msgctxt "Page Title"
+msgid "Activate your licenses"
+msgstr "Активируйте свои лицензии"
+
+#: templates/panel/activation/activation-panel.php:24
+msgctxt "License section message"
+msgid "Your licenses are active."
+msgstr "Ваши лицензии активированы."
+
+#: templates/panel/activation/activation-panel.php:81
+msgctxt "License section message"
+msgid "No licenses have been activated."
+msgstr "Лицензии не активированы."
+
+#: templates/panel/activation/activation-panel.php:30
+msgctxt ""
+"[Part of]: Are you having issues with the license activation? Read this "
+"article"
+msgid "Are you having issues with the license activation?"
+msgstr "Возникли проблемы с активацией лицензии?"
+
+#: templates/panel/activation/activation-panel.php:32
+msgctxt ""
+"[Part of]: Are you having issues with the license activation? Read this "
+"article"
+msgid "Read this article"
+msgstr "Прочтите эту статью"
+
+#: templates/panel/activation/activation-panel.php:40
+msgctxt "Form Label"
+msgid "Plugin"
+msgid_plural "Choose the plugin"
+msgstr[0] "Выберите плагин"
+msgstr[1] "Выберите плагины"
+msgstr[2] "Выберите плагины"
+
+#: templates/panel/activation/activation-panel.php:55
+msgctxt "Link on activation license panel"
+msgid "E-mail associated with order"
+msgstr "Электронная почта, связанная с заказом"
+
+#: templates/panel/activation/activation-panel.php:63
+#: templates/panel/activation/onboarding-activation.php:64
+msgctxt "Link on activation license panel"
+msgid "License key"
+msgstr "Лицензионный ключ"
+
+#: templates/panel/activation/activation-panel.php:64
+msgctxt "Link on activation license panel"
+msgid "Where to find these?"
+msgstr "Где их найти?"
+
+#: templates/panel/activation/onboarding-activation.php:57
+msgctxt "Link on activation license panel"
+msgid "Email associated with order"
+msgstr "Электронная почта, связанная с заказом"
+
+#: templates/panel/activation/onboarding-activation.php:65
+msgctxt "Link on activation license panel"
+msgid "Where to find your license key?"
+msgstr "Где найти лицензионный ключ?"
+
+#: templates/panel/activation/activation-panel.php:56
+msgctxt "Placeholder"
+msgid "Enter the e-mail address for this license"
+msgstr "Введите адрес электронной почты для этой лицензии"
+
+#: templates/panel/activation/activation-panel.php:69
+msgctxt "Placeholder"
+msgid "Enter the license key"
+msgstr "Введите лицензионный ключ"
+
+#: templates/panel/activation/activation-panel.php:72
+msgctxt "Button Label"
+msgid "Activate"
+msgstr "Активировать"
+
+#: templates/panel/activation/activation-panel.php:79
+msgctxt "Section Title"
+msgid "Licenses Activated"
+msgstr "Активированные лицензии"
+
+#: templates/panel/activation/activation-panel.php:85
+msgctxt "button label"
+msgid "Update Expiry Dates"
+msgstr "Обновить даты завершения лицензий"
+
+#: templates/panel/activation/activation-row.php:48
+msgctxt "button label"
+msgid "renew"
+msgstr "продлить"
+
+#: templates/panel/activation/activation-panel.php:91
+#: templates/panel/activation/activation-row.php:22
+msgctxt "Table Field"
+msgid "License:"
+msgstr "Лицензия:"
+
+#: templates/panel/activation/activation-panel.php:92
+#: templates/panel/activation/activation-row.php:25
+msgctxt "Table Field"
+msgid "Email:"
+msgstr "Email:"
+
+#: templates/panel/activation/activation-panel.php:93
+#: templates/panel/activation/activation-row.php:28
+msgctxt "Table Field"
+msgid "License Key:"
+msgstr "Лицензионный ключ:"
+
+#: templates/panel/activation/activation-panel.php:94
+#: templates/panel/activation/activation-row.php:31
+msgctxt "Table Field"
+msgid "Licenses used:"
+msgstr "Использовано лицензий:"
+
+#: templates/panel/activation/activation-panel.php:95
+#: templates/panel/activation/activation-row.php:41
+msgctxt "Table Field"
+msgid "Expires on:"
+msgstr "Истекает:"
+
+#: templates/panel/activation/activation-row.php:44
+msgctxt "License status"
+msgid "banned"
+msgstr "заблокирована"
+
+#: templates/panel/activation/activation-row.php:46
+msgctxt "License status"
+msgid "expired"
+msgstr "истекла"
+
+#: templates/panel/activation/activation-row.php:51
+msgctxt "this is a short text for a link"
+msgid "Or get a new license"
+msgstr "Или получите новую лицензию"

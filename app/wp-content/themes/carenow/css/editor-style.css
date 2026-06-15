@@ -1,0 +1,123 @@
+body,
+.editor-styles-wrapper {
+    background: #fff;
+    color: #565872;
+    font-family: "Roboto", sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.editor-styles-wrapper .is-root-container {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.editor-styles-wrapper .wp-block {
+    max-width: none;
+}
+
+.editor-styles-wrapper p {
+    margin-bottom: 12px;
+}
+
+.editor-styles-wrapper p:last-of-type {
+    margin-bottom: 0;
+}
+
+.editor-styles-wrapper figure {
+    margin-top: 32px;
+}
+
+.editor-styles-wrapper table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+.editor-styles-wrapper th,
+.editor-styles-wrapper td {
+    border: 1px solid #dbdbdb;
+    padding: 7px;
+    vertical-align: top;
+}
+
+.editor-styles-wrapper th {
+    font-weight: 500;
+}
+
+.editor-styles-wrapper .wp-block-table {
+    overflow-x: auto;
+}
+
+.editor-styles-wrapper .wp-block-details,
+.editor-styles-wrapper .wp-block-medvise-seodetails-medvise {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.editor-styles-wrapper .wp-block-details__locked {
+    opacity: 0.7;
+}
+
+.editor-styles-wrapper .wp-block-medvise-seodetails-medvise {
+    display: none;
+}
+
+.editor-styles-wrapper details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+.editor-styles-wrapper summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+.editor-styles-wrapper details[open] {
+    padding: 0.5em;
+}
+
+.editor-styles-wrapper details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 767.5px) {
+    .editor-styles-wrapper .is-root-container {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .editor-styles-wrapper h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .editor-styles-wrapper h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .editor-styles-wrapper h3,
+    .editor-styles-wrapper h4,
+    .editor-styles-wrapper h5,
+    .editor-styles-wrapper h6 {
+        font-size: 16px;
+        text-align: center;
+    }
+}
